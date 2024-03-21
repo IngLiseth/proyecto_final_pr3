@@ -1,18 +1,21 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Empleado extends Persona{
-    Evento evento;
+    private List<Evento> listaDeEventos;
 
-    public Empleado(int id, String nombre, String correo ,Evento evento) {
+    public Empleado(int id, String nombre, String correo) {
         super(id, nombre, correo);
-        this.evento=evento;
+        this.listaDeEventos=new ArrayList<>();
     }
 
-    public Evento getEvento() {
-        return evento;
+    public List<Evento> getListaDeEventos() {
+        return listaDeEventos;
     }
 
-    public void setEvento(Evento evento) {
-        this.evento = evento;
+    public void agregarEventos(Evento evento) {
+        this.listaDeEventos.add(evento);
     }
 }

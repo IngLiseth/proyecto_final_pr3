@@ -1,18 +1,22 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Usuario extends Persona {
-    Reserva reserva;
 
-    public Usuario(int id, String nombre, String correo,Reserva reserva) {
+    private List<Reserva> reservasDelUsuario;
+
+    public Usuario(int id, String nombre, String correo) {
         super(id, nombre, correo);
-        this.reserva=reserva;
+        this.reservasDelUsuario=new ArrayList<>();
     }
 
-    public Reserva getReserva() {
-        return reserva;
+    public List<Reserva> getReservasDelUsuario() {
+        return reservasDelUsuario;
     }
 
-    public void setReserva(Reserva reserva) {
-        this.reserva = reserva;
+    public void agregarReservasAlUsuario(Reserva reserva) {
+        this.reservasDelUsuario.add(reserva);
     }
 }
