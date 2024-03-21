@@ -11,5 +11,6 @@ public class Evento {
     private double capacidadMaxima;
     private Empleado empleadoEncargado;
     private Reserva reserva;
-
+    //año
+    private int cedul;
 }
