@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Empleado extends Persona{
     private List<Evento> listaDeEventos;
+    private String roles;
 
     public Empleado(int id, String nombre, String correo) {
         super(id, nombre, correo);
