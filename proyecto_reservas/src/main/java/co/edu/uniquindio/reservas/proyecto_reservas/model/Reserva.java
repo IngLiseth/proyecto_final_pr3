@@ -7,9 +7,9 @@ public class Reserva {
     private Usuario usuario;
     private Evento evento;
     private LocalDate fechaDeSolicitud;
-    private String estado;
+    private Estado estado;
 
-    public Reserva(int id, Usuario usuario, Evento evento, LocalDate fechaDeSolicitud, String estado) {
+    public Reserva(int id, Usuario usuario, Evento evento, LocalDate fechaDeSolicitud, Estado estado) {
         this.id = id;
         this.usuario = usuario;
         this.evento = evento;
@@ -26,7 +26,7 @@ public class Reserva {
     public void setEvento(Evento evento) {this.evento = evento;}
     public LocalDate getFechaDeSolicitud() {return fechaDeSolicitud;}
     public void setFechaDeSolicitud(LocalDate fechaDeSolicitud) {this.fechaDeSolicitud = fechaDeSolicitud;}
-    public String getEstado() {return estado;}
-    public void setEstado(String estado){this.estado = estado;}
+    public Estado getEstado() {return estado;}
+    public void setEstado(Estado estado){this.estado = estado;}
 
 }
