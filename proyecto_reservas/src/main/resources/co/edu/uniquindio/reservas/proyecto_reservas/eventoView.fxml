@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservas.proyecto_reservas.EventoViewController">
+   <children>
+      <GridPane layoutX="-29.0" layoutY="21.0" prefHeight="150.0" prefWidth="589.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txtCedulaUsuario" prefHeight="0.0" prefWidth="330.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtCedulaUsuario1" prefHeight="0.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtCedulaUsuario2" prefHeight="0.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="17.0" prefWidth="146.0" text="                               Id:" />
+            <Label prefHeight="17.0" prefWidth="145.0" text="                         Nombre:" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="138.0" text="                    Descripción:" GridPane.rowIndex="2" />
+            <DatePicker GridPane.columnIndex="3" />
+            <Label prefHeight="17.0" prefWidth="146.0" text="                               Id:" />
+            <Label prefHeight="17.0" prefWidth="146.0" text="                               Id:" />
+            <Label prefHeight="17.0" prefWidth="146.0" text="                            Fecha:" GridPane.columnIndex="2" />
+            <TextField fx:id="txtCedulaUsuario11" prefHeight="0.0" prefWidth="330.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="146.0" text="          Capacidad Máxima:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="146.0" text="        Empleado Encargado:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="txtCedulaUsuario21" prefHeight="0.0" prefWidth="330.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView layoutX="1.0" layoutY="237.0" prefHeight="166.0" prefWidth="600.0">
+        <columns>
+          <TableColumn prefWidth="36.0" text="id" />
+          <TableColumn prefWidth="128.0" text="Nombre" />
+            <TableColumn prefWidth="107.0" text="Descripción" />
+            <TableColumn prefWidth="60.0" text="Fecha" />
+            <TableColumn prefWidth="109.0" text="Capacidad Max" />
+            <TableColumn prefWidth="159.0" text="Empleado Encargado" />
+        </columns>
+      </TableView>
+      <Button layoutX="121.0" layoutY="189.0" mnemonicParsing="false" text="Registrar" />
+      <Button layoutX="347.0" layoutY="189.0" mnemonicParsing="false" text="Consultar" />
+      <Button layoutX="466.0" layoutY="189.0" mnemonicParsing="false" text="Eliminar" />
+      <Button layoutX="222.0" layoutY="189.0" mnemonicParsing="false" text="Actualizar" />
+   </children>
+</AnchorPane>

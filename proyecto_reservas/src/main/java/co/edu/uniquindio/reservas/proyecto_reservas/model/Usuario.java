@@ -5,11 +5,25 @@ import java.util.List;
 
 public class Usuario extends Persona {
 
+    private String contrasena;
     private List<Reserva> reservasDelUsuario;
 
-    public Usuario(int id, String nombre, String correo) {
+    public Usuario(int id, String nombre, String correo,String contrasena) {
         super(id, nombre, correo);
+        this.contrasena=contrasena;
         this.reservasDelUsuario=new ArrayList<>();
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public void setReservasDelUsuario(List<Reserva> reservasDelUsuario) {
+        this.reservasDelUsuario = reservasDelUsuario;
     }
 
     public List<Reserva> getReservasDelUsuario() {

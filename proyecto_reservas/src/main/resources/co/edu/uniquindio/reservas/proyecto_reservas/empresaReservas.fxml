@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservas.proyecto_reservas.UsuarioViewController">
+   <children>
+      <TabPane layoutX="10.0" layoutY="10.0" prefHeight="545.0" prefWidth="710.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Usuario">
+                <content>
+                    <AnchorPane prefHeight="516.0" prefWidth="817.0">
+                        <fx:include source="usuarioView.fxml" />
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Reserva">
+                <content>
+                    <AnchorPane>
+                        <fx:include source="reservaView.fxml" />
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Evento">
+                <content>
+                    <AnchorPane>
+                        <fx:include source="eventoView.fxml" />
+                    </AnchorPane>
+                </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

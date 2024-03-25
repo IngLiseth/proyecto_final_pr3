@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="442.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservas.proyecto_reservas.ReservaViewController">
+   <children>
+      <GridPane layoutX="31.0" layoutY="8.0" prefHeight="191.0" prefWidth="538.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="83.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="146.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="120.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="166.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="93.0" text="                      Id:" />
+            <TextField fx:id="txtIdReserva" GridPane.columnIndex="1" />
+            <Label prefHeight="17.0" prefWidth="91.0" text="             Usuario:" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="91.0" text="              Evento:" GridPane.rowIndex="2" />
+            <TextField fx:id="txtUsuarioReserva" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtEventoReserva" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="            Fecha solicitud:" GridPane.columnIndex="2" />
+            <DatePicker fx:id="dtFechaReserva" GridPane.columnIndex="3" />
+            <Label prefHeight="17.0" prefWidth="127.0" text="                         Estado:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cbEstadoReserva" prefWidth="150.0" promptText="seleccione aqui" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="124.0" text=" Espacios de la reserva:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="txtEspacioReserva" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblRerserva" layoutX="42.0" layoutY="237.0" prefHeight="191.0" prefWidth="538.0">
+        <columns>
+          <TableColumn fx:id="tcIdReserva" prefWidth="35.0" text="Id" />
+          <TableColumn fx:id="tcUsuarioReserva" prefWidth="129.0" text="Usuario" />
+            <TableColumn fx:id="tcEventoReserva" prefWidth="91.0" text="Evento" />
+            <TableColumn fx:id="tcFechaReserva" prefWidth="93.0" text="Fecha solicitud" />
+            <TableColumn fx:id="tcEstadoReserva" prefWidth="89.0" text="estado" />
+            <TableColumn fx:id="tcEspacioReserva" prefWidth="100.0" text="Espacio reserva" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnRegistarReserva" layoutX="131.0" layoutY="199.0" mnemonicParsing="false" text="Registrar" />
+      <Button fx:id="btnConsultarReserva" layoutX="357.0" layoutY="199.0" mnemonicParsing="false" text="Consultar" />
+      <Button fx:id="btnEliminarReserva" layoutX="476.0" layoutY="199.0" mnemonicParsing="false" text="Eliminar" />
+      <Button fx:id="btnActualizarReserva" layoutX="232.0" layoutY="199.0" mnemonicParsing="false" text="Actualizar" />
+   </children>
+</AnchorPane>
