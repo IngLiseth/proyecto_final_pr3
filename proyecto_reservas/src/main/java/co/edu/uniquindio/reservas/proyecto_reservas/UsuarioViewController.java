@@ -63,7 +63,7 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     }
     private void intiView(){
         initDataBinding();
-        obtenerEmpleados();
+        obtenerUsuario();
         tblUsuario.getItems().clear();
         tblUsuario.setItems(listaUsuariosDto);
         listenerSelection();
@@ -90,6 +90,10 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
             txtCorreoUsuario.setText(usuarioSeleccionado.correo());
             txtNombreUsuario.setText(usuarioSeleccionado.nombre());
         }
+    }
+
+    private void  obtenerUsuario(){
+        listaUsuariosDto.addAll(usuarioController.obtenerUsuario());
     }
 
 }
