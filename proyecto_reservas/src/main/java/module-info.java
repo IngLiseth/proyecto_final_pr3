@@ -6,4 +6,6 @@ module co.edu.uniquindio.reservas.proyecto_reservas {
 
     opens co.edu.uniquindio.reservas.proyecto_reservas to javafx.fxml;
     exports co.edu.uniquindio.reservas.proyecto_reservas;
+    exports co.edu.uniquindio.reservas.proyecto_reservas.viewController;
+    opens co.edu.uniquindio.reservas.proyecto_reservas.viewController to javafx.fxml;
 }

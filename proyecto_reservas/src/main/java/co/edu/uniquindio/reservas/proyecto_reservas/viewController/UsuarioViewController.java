@@ -1,4 +1,4 @@
-package co.edu.uniquindio.reservas.proyecto_reservas;
+package co.edu.uniquindio.reservas.proyecto_reservas.viewController;
 
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.UsuarioController;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
