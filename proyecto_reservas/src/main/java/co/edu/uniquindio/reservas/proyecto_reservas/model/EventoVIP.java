@@ -1,5 +1,7 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
+import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.UsuarioExceptions;
+import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IeventosVIPService;
 
 import java.util.ArrayList;
@@ -59,7 +61,7 @@ public class EventoVIP implements IeventosVIPService {
 
     @Override
     public boolean crearUsuario(Usuario usuario) {
-        return false;
+      return true;
     }
 
     @Override
@@ -70,5 +72,24 @@ public class EventoVIP implements IeventosVIPService {
     @Override
     public boolean consultarUsuario(String id) {
         return false;
+    }
+
+    public boolean verificarUsuarioExistente(String id)  throws UsuarioExceptions {
+        if ( usuarioExiste(id)) {
+            throw new UsuarioExceptions("El usuario con cédula" + id + "ya existe");
+        }else {
+            return false;
+        }
+    }
+
+    private boolean usuarioExiste(String id) {
+        boolean usuarioExiste = false;
+        for (Usuario usuario: getListaUsuarios()) {
+            if (usuario.getId().equalsIgnoreCase(id)){
+                usuarioExiste = true;
+                break;
+            }
+        }
+        return  usuarioExiste;
     }
 }

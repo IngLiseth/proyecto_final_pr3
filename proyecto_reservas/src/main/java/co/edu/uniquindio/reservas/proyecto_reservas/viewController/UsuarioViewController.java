@@ -7,10 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class UsuarioViewController {
 
@@ -42,8 +39,8 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     @FXML
     private TableColumn<UsuarioDto, String> tcNombreUsuario;
 
-    @FXML
-    private TableColumn<UsuarioDto, String> tcReservaUsuario;
+//    @FXML
+//    private TableColumn<UsuarioDto, String> tcReservaUsuario;
 
     @FXML
     private TextField txtCedulaUsuario;
@@ -64,17 +61,37 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     }
     @FXML
     public void crearUsuario (ActionEvent event ){
-        agregarUsurio();
+        agregarUsuario();
 
     }
-    private void agregarUsurio(){
+    private void agregarUsuario(){
        UsuarioDto usuarioDto = construirUsuarioDTO ();
+       if(datosValidos(usuarioDto)){
+           if (usuarioController.crearUsuario(usuarioDto)) {
+             listaUsuariosDto.add(usuarioDto);
+             mostrarMensaje("Notificación usuario", "Usuario creado","El usuario ha sido creado con éxito", Alert.AlertType.INFORMATION);
+             limpiarCamposUsuario();
+           }else {
+               mostrarMensaje("Notificación usuario","Usuario no creado","El usuario no se ha creado con éxito", Alert.AlertType.ERROR);
+               }
+       }else {
+
+        mostrarMensaje("Notificación usuario","Usuario no creado","Los datos ingresados son invalidos ", Alert.AlertType.ERROR);
+       }
+
+    }
+
+    private void limpiarCamposUsuario() {
+        txtNombreUsuario.setText("");
+        txtCedulaUsuario.setText("");
+        txtCorreoUsuario.setText("");
+        txtContrasenaUsuario.setText("");
 
     }
 
     private UsuarioDto construirUsuarioDTO() {
         UsuarioDto usuarioDto = new UsuarioDto(
-                Integer.parseInt(txtCedulaUsuario.getText()),
+                txtCedulaUsuario.getText(),
                 txtNombreUsuario.getText(),
                 txtCorreoUsuario.getText(),
                 txtContrasenaUsuario.getText()
@@ -86,9 +103,35 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     public void actualizarUsuario(ActionEvent event ){
 
     }
+    private boolean datosValidos(UsuarioDto usuarioDto) {
+        String mensaje = "";
+        if(usuarioDto.id() == null || usuarioDto.id().equals(""))
+            mensaje += "La cédula es invalida \n" ;
+        if(usuarioDto.nombre() == null || usuarioDto.nombre() .equals(""))
+            mensaje += "El nombre es invalido \n" ;
+        if(usuarioDto.correo() == null || usuarioDto.correo().equals(""))
+            mensaje += "El correo electrónico es invalido \n" ;
+        if(usuarioDto.contrasena() == null || usuarioDto.contrasena().equals(""))
+            mensaje += "La contraseña es invalida \n" ;
+        if(mensaje.equals("")){
+            return true;
+        }else{
+            mostrarMensaje("Notificación usuario","Datos invalidos",mensaje, Alert.AlertType.WARNING);
+            return false;
+        }
+    }
+
+    private void mostrarMensaje(String titulo, String header, String contenido, Alert.AlertType alertType) {
+        Alert aler = new Alert(alertType);
+        aler.setTitle(titulo);
+        aler.setHeaderText(header);
+        aler.setContentText(contenido);
+        aler.showAndWait();
+    }
 
 
     private void intiView(){
+
         initDataBinding();
         obtenerUsuario();
         tblUsuario.getItems().clear();
@@ -97,10 +140,9 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     }
 
     private void initDataBinding() {
-        tcCedulaUsuario.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().id())));
+        tcCedulaUsuario.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().id()));
         tcCorreoUsuario.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().correo()));
         tcNombreUsuario.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().nombre()));
-
     }
 
     private void listenerSelection() {
@@ -112,7 +154,7 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
 
     private void mostrarInformacionEmpleado(UsuarioDto usuarioSeleccionado) {
         if(usuarioSeleccionado != null){
-            txtCedulaUsuario.setText(String.valueOf(usuarioSeleccionado.id()));
+            txtCedulaUsuario.setText(usuarioSeleccionado.id());
             txtContrasenaUsuario.setText(usuarioSeleccionado.contrasena());
             txtCorreoUsuario.setText(usuarioSeleccionado.correo());
             txtNombreUsuario.setText(usuarioSeleccionado.nombre());

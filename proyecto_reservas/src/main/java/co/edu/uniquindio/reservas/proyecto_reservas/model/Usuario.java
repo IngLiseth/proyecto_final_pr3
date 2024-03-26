@@ -8,7 +8,7 @@ public class Usuario extends Persona {
     private String contrasena;
     private List<Reserva> reservasDelUsuario;
 
-    public Usuario(int id, String nombre, String correo,String contrasena) {
+    public Usuario(String id, String nombre, String correo,String contrasena) {
         super(id, nombre, correo);
         this.contrasena=contrasena;
         this.reservasDelUsuario=new ArrayList<>();

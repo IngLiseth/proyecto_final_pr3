@@ -1,5 +1,6 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model.services;
 
+import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario;
 
 public interface IeventosVIPService {

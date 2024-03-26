@@ -1,9 +1,11 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.controller;
 
+import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.UsuarioExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.services.IModelFactoryService;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.mappers.EventoVIPMapper;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario;
 import co.edu.uniquindio.reservas.proyecto_reservas.utils.EventoVIPutils;
 
 import java.util.ArrayList;
@@ -22,7 +24,19 @@ public class ModelFactoryController implements IModelFactoryService {
 
     @Override
     public boolean crearUsuario(UsuarioDto usuarioDto) {
-        return false;
+        try {
+            if(!eventoVIP.verificarUsuarioExistente(usuarioDto.id())) {
+                Usuario usuario = mapper.usuarioDtoTousario(usuarioDto);
+                getEventoVIP().crearUsuario(usuario);
+
+            }
+            return true;
+
+        }catch (UsuarioExceptions exceptions){
+            exceptions.getMessage();
+            return false;
+
+        }
     }
 
     @Override

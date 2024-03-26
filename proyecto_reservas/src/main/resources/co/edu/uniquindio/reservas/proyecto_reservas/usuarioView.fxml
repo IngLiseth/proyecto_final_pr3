@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="472.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservas.proyecto_reservas.viewController.UsuarioViewController">
+<AnchorPane prefHeight="472.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservas.proyecto_reservas.viewController.UsuarioViewController">
 
     <GridPane layoutX="37.0" layoutY="26.0" prefHeight="150.0" prefWidth="458.0">
         <columnConstraints>
@@ -42,7 +42,7 @@
          <TableColumn fx:id="tcCedulaUsuario" prefWidth="115.0" text="Cédula" />
          <TableColumn fx:id="tcNombreUsuario" prefWidth="179.0" text="Nombre" />
          <TableColumn fx:id="tcCorreoUsuario" prefWidth="203.0" text="Correo Electrónico" />
-         <TableColumn fx:id="tcReservaUsuario" prefWidth="184.0" text="Reserva" />
+         <TableColumn prefWidth="184.0" text="Reserva" />
       </columns>
    </TableView>
    <Button fx:id="btnActualizarUsuario" layoutX="232.0" layoutY="202.0" mnemonicParsing="false" onAction="#actualizarUsuario" text="Actualizar" />
