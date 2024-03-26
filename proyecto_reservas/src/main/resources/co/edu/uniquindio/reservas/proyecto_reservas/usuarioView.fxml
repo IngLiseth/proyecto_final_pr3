@@ -34,7 +34,7 @@
             <TextField fx:id="txtContrasenaUsuario" prefHeight="0.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
         </children>
     </GridPane>
-    <Button fx:id="btnRegistrarUsuario" layoutX="131.0" layoutY="202.0" mnemonicParsing="false" text="Registrar" />
+    <Button fx:id="btnRegistrarUsuario" layoutX="131.0" layoutY="202.0" mnemonicParsing="false" onAction="#crearUsuario" text="Registrar" />
     <Button fx:id="btnConsultarUsuario" layoutX="357.0" layoutY="202.0" mnemonicParsing="false" text="Consultar" />
     <Button fx:id="btnEliminarUsuario" layoutX="489.0" layoutY="202.0" mnemonicParsing="false" text="Eliminar" />
    <TableView fx:id="tblUsuario" layoutY="265.0" prefHeight="225.0" prefWidth="698.0">
@@ -45,7 +45,7 @@
          <TableColumn fx:id="tcReservaUsuario" prefWidth="184.0" text="Reserva" />
       </columns>
    </TableView>
-   <Button fx:id="btnActualizarUsuario" layoutX="232.0" layoutY="202.0" mnemonicParsing="false" text="Actualizar" />
+   <Button fx:id="btnActualizarUsuario" layoutX="232.0" layoutY="202.0" mnemonicParsing="false" onAction="#actualizarUsuario" text="Actualizar" />
 
 
 </AnchorPane>

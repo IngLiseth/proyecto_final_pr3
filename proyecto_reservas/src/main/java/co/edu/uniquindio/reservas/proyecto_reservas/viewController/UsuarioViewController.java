@@ -5,6 +5,7 @@ import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -61,6 +62,32 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
         usuarioController= new UsuarioController();
         intiView();
     }
+    @FXML
+    public void crearUsuario (ActionEvent event ){
+        agregarUsurio();
+
+    }
+    private void agregarUsurio(){
+       UsuarioDto usuarioDto = construirUsuarioDTO ();
+
+    }
+
+    private UsuarioDto construirUsuarioDTO() {
+        UsuarioDto usuarioDto = new UsuarioDto(
+                Integer.parseInt(txtCedulaUsuario.getText()),
+                txtNombreUsuario.getText(),
+                txtCorreoUsuario.getText(),
+                txtContrasenaUsuario.getText()
+        );
+        return usuarioDto;
+    }
+
+    @FXML
+    public void actualizarUsuario(ActionEvent event ){
+
+    }
+
+
     private void intiView(){
         initDataBinding();
         obtenerUsuario();
@@ -95,5 +122,6 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     private void  obtenerUsuario(){
         listaUsuariosDto.addAll(usuarioController.obtenerUsuario());
     }
+
 
 }
