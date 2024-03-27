@@ -62,12 +62,18 @@ public class ModelFactoryController implements IModelFactoryService {
             e.printStackTrace();
         }
         return flagExiste;
-
     }
 
     @Override
     public boolean consultarUsuario(String id) {
-        return false;
+        boolean existe = false;
+        try {
+            existe = getEventoVIP().consultarUsuario(id);
+        } catch (UsuarioExceptions e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return existe;
     }
 
     private static class SingletonHolder {
@@ -88,6 +94,10 @@ public class ModelFactoryController implements IModelFactoryService {
 
     public List<UsuarioDto> obtenerUsuario() {
         return mapperUsuario.ListausuarioToUsuarioDto(eventoVIP.getListaUsuarios());
+    }
+
+    public UsuarioDto obtenerUnUsuariodelEvento(String id){
+        return mapperUsuario.usuarioToUsuarioDto(eventoVIP.obtenerUnUsuario(id));
     }
 
 

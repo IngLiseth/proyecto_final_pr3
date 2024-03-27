@@ -8,55 +8,39 @@ import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IeventosVIPSe
 import java.util.ArrayList;
 import java.util.List;
 
-    public class UsuarioController  implements IModelFactoryService {
+public class UsuarioController  implements IModelFactoryService {
     ModelFactoryController modelFactoryController;
+    public UsuarioController(){
+        modelFactoryController= ModelFactoryController.getInstance();
+    }
 
     public List<UsuarioDto> obtenerUsuario(){
         return  modelFactoryController.obtenerUsuario();
     }
 
-    public UsuarioController(){
-        modelFactoryController= ModelFactoryController.getInstance();
+    public UsuarioDto obtenerUnUsuario(String id){
+        return modelFactoryController.obtenerUnUsuariodelEvento(id);
     }
+
+
     @Override
     public boolean actualizarUsuario(String id, UsuarioDto usuarioDto) {
-
         return modelFactoryController.actualizarUsuario(id,usuarioDto);
     }
 
-
     @Override
     public boolean crearUsuario(UsuarioDto usuarioDto) {
-        return modelFactoryController.crearUsuario(usuarioDto);    }
+        return modelFactoryController.crearUsuario(usuarioDto);
+    }
 
     @Override
-    public boolean eliminarUsuario(String id)
-    {
+    public boolean eliminarUsuario(String id) {
         return modelFactoryController.eliminarUsuario(id);
     }
 
     @Override
     public boolean consultarUsuario(String id) {
-        return false;
+        return modelFactoryController.consultarUsuario(id);
     }
 
-/*
-
-    @Override
-    public boolean crearUsuario(UsuarioDto usuarioDto) {
-
-
-    }
-
-    @Override
-    public boolean eliminarUsuario(String id) {
-        return false;
-    }
-
-    @Override
-    public boolean consultarUsuario(String id) {
-        return false;
-    }
-
- */
 }

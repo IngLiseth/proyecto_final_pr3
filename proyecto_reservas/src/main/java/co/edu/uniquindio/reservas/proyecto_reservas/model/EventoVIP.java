@@ -51,6 +51,8 @@ public class EventoVIP implements IeventosVIPService {
         this.listaReservas = listaReservas;
     }
 
+
+
     //Sobreescribir la interfaz
     @Override
     public boolean actualizarUsuario(String id, Usuario usuario) throws UsuarioExceptions {
@@ -68,8 +70,8 @@ public class EventoVIP implements IeventosVIPService {
     }
 
     @Override
-    public boolean crearUsuario(Usuario usuario) {
-      return true;
+    public void crearUsuario(Usuario usuario) {
+        getListaUsuarios().add(usuario);
     }
 
     @Override
@@ -87,8 +89,22 @@ public class EventoVIP implements IeventosVIPService {
     }
 
     @Override
-    public boolean consultarUsuario(String id) {
-        return false;
+    public boolean consultarUsuario(String id) throws UsuarioExceptions {
+        if (usuarioExiste(id)) {
+            return true;
+        }else {
+            throw new UsuarioExceptions("El usuario con cédula" + id + "ya existe");
+        }
+    }
+    public Usuario obtenerUnUsuario(String id){
+        Usuario usuarioObtenido=null;
+        for(Usuario usuario:getListaUsuarios()){
+            if(usuario.getId().equals(id)){
+                usuarioObtenido = usuario;
+                break;
+            }
+        }
+        return usuarioObtenido;
     }
 
     public boolean verificarUsuarioExistente(String id)  throws UsuarioExceptions {

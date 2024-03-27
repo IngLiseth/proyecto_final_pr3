@@ -82,6 +82,19 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     public void actualizarUsuarioAction (ActionEvent event){
         actualizarUsuario();
     }
+    @FXML
+    public void consultarUsuarioAction(ActionEvent event){
+        consultarUsuario();
+    }
+
+    private void consultarUsuario(){
+        if(usuarioController.consultarUsuario(txtCedulaUsuario.getText())){
+            UsuarioDto usuarioDto= usuarioController.obtenerUnUsuario(txtCedulaUsuario.getText());
+            mostrarInformacionUsuario(usuarioDto);
+        }else{
+            mostrarMensaje("Notificación usuario","Usuario no encontrado","El usuario no éxiste", Alert.AlertType.ERROR);
+        }
+    }
     private void agregarUsuario(){
        UsuarioDto usuarioDto = construirUsuarioDTO ();
        if(datosValidos(usuarioDto)){
@@ -205,11 +218,11 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     private void listenerSelection() {
         tblUsuario.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             usuarioSeleccionado = newSelection;
-            mostrarInformacionEmpleado(usuarioSeleccionado);
+            mostrarInformacionUsuario(usuarioSeleccionado);
         });
     }
 
-    private void mostrarInformacionEmpleado(UsuarioDto usuarioSeleccionado) {
+    private void mostrarInformacionUsuario(UsuarioDto usuarioSeleccionado) {
         if(usuarioSeleccionado != null){
             txtCedulaUsuario.setText(usuarioSeleccionado.id());
             txtContrasenaUsuario.setText(usuarioSeleccionado.contrasena());

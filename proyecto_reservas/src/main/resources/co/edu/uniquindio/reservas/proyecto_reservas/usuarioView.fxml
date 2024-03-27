@@ -35,17 +35,17 @@
         </children>
     </GridPane>
     <Button fx:id="btnRegistrarUsuario" layoutX="131.0" layoutY="202.0" mnemonicParsing="false" onAction="#crearUsuario" text="Registrar" />
-    <Button fx:id="btnConsultarUsuario" layoutX="357.0" layoutY="202.0" mnemonicParsing="false" text="Consultar" />
+    <Button fx:id="btnConsultarUsuario" layoutX="357.0" layoutY="202.0" mnemonicParsing="false" onAction="#consultarUsuarioAction" text="Consultar" />
     <Button fx:id="btnEliminarUsuario" layoutX="489.0" layoutY="202.0" mnemonicParsing="false" onAction="#eliminarUsuaroAction" text="Eliminar" />
    <TableView fx:id="tblUsuario" layoutY="265.0" prefHeight="225.0" prefWidth="698.0">
       <columns>
          <TableColumn fx:id="tcCedulaUsuario" prefWidth="115.0" text="Cédula" />
          <TableColumn fx:id="tcNombreUsuario" prefWidth="179.0" text="Nombre" />
          <TableColumn fx:id="tcCorreoUsuario" prefWidth="203.0" text="Correo Electrónico" />
-
+         <TableColumn prefWidth="184.0" text="Reserva" />
       </columns>
    </TableView>
-   <Button fx:id="btnActualizarUsuario" layoutX="232.0" layoutY="202.0" mnemonicParsing="false" onAction="#actualizarUsuario" text="Actualizar" />
+   <Button fx:id="btnActualizarUsuario" layoutX="232.0" layoutY="202.0" mnemonicParsing="false" onAction="#actualizarUsuarioAction" text="Actualizar" />
 
 
 </AnchorPane>
