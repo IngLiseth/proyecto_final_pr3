@@ -53,8 +53,18 @@ public class EventoVIP implements IeventosVIPService {
 
     //Sobreescribir la interfaz
     @Override
-    public boolean actualizarUsuario(String id, Usuario usuario) {
-        return false;
+    public boolean actualizarUsuario(String id, Usuario usuario) throws UsuarioExceptions {
+        Usuario usuarioActual= obtenerUsuario(id);
+        if (usuarioActual== null){
+            throw new UsuarioExceptions("El usuario a actualizar no existe");
+
+        }else{
+            usuarioActual.setId(usuario.getId());
+            usuarioActual.setNombre(usuario.getNombre());
+            usuarioActual.setCorreo(usuario.getCorreo());
+            usuarioActual.setContrasena(usuario.getContrasena());
+            return true;
+        }
     }
 
     @Override

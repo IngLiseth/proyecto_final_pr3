@@ -24,8 +24,15 @@ public class ModelFactoryController implements IModelFactoryService {
     }
 
     @Override
-    public boolean actualizarUsuario(int id, UsuarioDto usuarioDto) {
-        return false;
+    public boolean actualizarUsuario(String id, UsuarioDto usuarioDto) {
+        try{
+            Usuario usuario =mapperUsuario.usuarioDtoTousario(usuarioDto);
+            getEventoVIP().actualizarUsuario(id,usuario);
+            return true;
+        }catch (UsuarioExceptions e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override

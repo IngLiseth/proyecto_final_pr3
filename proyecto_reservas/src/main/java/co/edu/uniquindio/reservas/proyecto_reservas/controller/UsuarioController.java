@@ -19,8 +19,9 @@ import java.util.List;
         modelFactoryController= ModelFactoryController.getInstance();
     }
     @Override
-    public boolean actualizarUsuario(int id, UsuarioDto usuarioDto) {
-        return false;
+    public boolean actualizarUsuario(String id, UsuarioDto usuarioDto) {
+
+        return modelFactoryController.actualizarUsuario(id,usuarioDto);
     }
 
 

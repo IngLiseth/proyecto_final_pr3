@@ -78,6 +78,10 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     void eliminarUsuaroAction(ActionEvent event) {
         eliminarUsuario();
     }
+    @FXML
+    public void actualizarUsuarioAction (ActionEvent event){
+        actualizarUsuario();
+    }
     private void agregarUsuario(){
        UsuarioDto usuarioDto = construirUsuarioDTO ();
        if(datosValidos(usuarioDto)){
@@ -133,8 +137,33 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
         return usuarioDto;
     }
 
-    @FXML
-    public void actualizarUsuario(ActionEvent event ){
+    public void actualizarUsuario( ){
+        boolean UsuarioActualizado = false;
+        //1. Capturar los datos
+        String idActual = usuarioSeleccionado.id();
+        UsuarioDto usuarioDto = construirUsuarioDTO();
+        //2. verificar el empleado seleccionado
+        if(usuarioSeleccionado != null){
+            //3. Validar la información
+            if(datosValidos(usuarioSeleccionado)){
+                UsuarioActualizado = usuarioController.actualizarUsuario( idActual,usuarioDto);
+                if(UsuarioActualizado){
+                    listaUsuariosDto.remove(usuarioSeleccionado);
+                    listaUsuariosDto.add(usuarioDto);
+                    tblUsuario.refresh();
+                    mostrarMensaje("Notificación usuario", "usuario actualizado", "El usuario se ha actualizado con éxito", Alert.AlertType.INFORMATION);
+                    limpiarCamposUsuario();
+                }else{
+                    mostrarMensaje("Notificación usuario", "usuario no actualizado", "El usuario no se ha actualizado ", Alert.AlertType.INFORMATION);
+                }
+            }else{
+                mostrarMensaje("Notificación usuario", "usuario no creado", "Los datos ingresados son invalidos", Alert.AlertType.ERROR);
+            }
+
+        }
+
+
+
 
     }
     private boolean datosValidos(UsuarioDto usuarioDto) {
