@@ -3,13 +3,13 @@ package co.edu.uniquindio.reservas.proyecto_reservas.model;
 import java.time.LocalDate;
 
 public class Reserva {
-    private int id;
+    private String id;
     private Usuario usuario;
     private Evento evento;
     private LocalDate fechaDeSolicitud;
     private Estado estado;
 
-    public Reserva(int id, Usuario usuario, Evento evento, LocalDate fechaDeSolicitud, Estado estado) {
+    public Reserva(String id, Usuario usuario, Evento evento, LocalDate fechaDeSolicitud, Estado estado) {
         this.id = id;
         this.usuario = usuario;
         this.evento = evento;
@@ -18,8 +18,8 @@ public class Reserva {
     }
 
 
-    public int getId() {return id;}
-    public void setId(int id) {this.id = id;}
+    public String getId() {return id;}
+    public void setId(String id) {this.id = id;}
     public Usuario getUsuario() {return usuario;}
     public void setUsuario(Usuario usuario) {this.usuario = usuario;}
     public Evento getEvento() {return evento;}

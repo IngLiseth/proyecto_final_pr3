@@ -15,32 +15,14 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        this.primaryStage = stage;
-        this.primaryStage.setTitle("reservas");
-        mostrarVentanaPrincipal();
-
-
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("empresaReservas.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void mostrarVentanaPrincipal() {
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(HelloApplication.class.getResource("empresaReservas.fxml"));
-            AnchorPane rootLayout = (AnchorPane) loader.load();
-            EventoViewController eventoViewController = loader.getController();
-            Scene scene = new Scene((rootLayout));
-            primaryStage.setScene(scene);
-            primaryStage.show();
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-
-    }
-    public static void main (String[]args){
+    public static void main(String[] args) {
         launch();
     }
 }

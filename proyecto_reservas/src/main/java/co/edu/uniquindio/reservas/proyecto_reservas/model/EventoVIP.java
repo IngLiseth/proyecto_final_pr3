@@ -10,9 +10,9 @@ import java.util.List;
 public class EventoVIP implements IeventosVIPService {
 
     private List<Usuario> listaUsuarios= new ArrayList<>();
-    private  List<Usuario> listaEmpleados= new ArrayList<>();
-    private List<Usuario> listaEventos= new ArrayList<>();
-    private  List<Usuario> listaReservas= new ArrayList<>();
+    private  List<Empleado> listaEmpleados= new ArrayList<>();
+    private List<Reserva> listaEventos= new ArrayList<>();
+    private  List<Evento> listaReservas= new ArrayList<>();
 
 
     public void EventosVIP(){}
@@ -27,35 +27,33 @@ public class EventoVIP implements IeventosVIPService {
         this.listaUsuarios = listaUsuarios;
     }
 
-    public List<Usuario> getListaEmpleados() {
+    public List<Empleado> getListaEmpleados() {
         return listaEmpleados;
     }
 
-    public void setListaEmpleados(List<Usuario> listaEmpleados) {
+    public void setListaEmpleados(List<Empleado> listaEmpleados) {
         this.listaEmpleados = listaEmpleados;
     }
 
-    public List<Usuario> getListaEventos() {
+    public List<Reserva> getListaEventos() {
         return listaEventos;
     }
 
-    public void setListaEventos(List<Usuario> listaEventos) {
+    public void setListaEventos(List<Reserva> listaEventos) {
         this.listaEventos = listaEventos;
     }
 
-    public List<Usuario> getListaReservas() {
+    public List<Evento> getListaReservas() {
         return listaReservas;
     }
 
-    public void setListaReservas(List<Usuario> listaReservas) {
+    public void setListaReservas(List<Evento> listaReservas) {
         this.listaReservas = listaReservas;
     }
 
-
-
     //Sobreescribir la interfaz
     @Override
-    public boolean actualizarUsuario(int id, Usuario usuario) {
+    public boolean actualizarUsuario(String id, Usuario usuario) {
         return false;
     }
 
@@ -65,8 +63,17 @@ public class EventoVIP implements IeventosVIPService {
     }
 
     @Override
-    public boolean eliminarUsuario(String id) {
-        return false;
+    public boolean eliminarUsuario(String id) throws UsuarioExceptions {
+        Usuario usuario = null;
+        boolean flagExiste = false;
+        usuario = obtenerUsuario(id);
+        if(usuario == null)
+            throw new UsuarioExceptions("El usuario a eliminar no existe");
+        else{
+            getListaUsuarios().remove(usuario);
+            flagExiste = true;
+        }
+        return flagExiste;
     }
 
     @Override
@@ -91,5 +98,18 @@ public class EventoVIP implements IeventosVIPService {
             }
         }
         return  usuarioExiste;
+    }
+
+    @Override
+    public Usuario obtenerUsuario(String id) {
+            Usuario usuarioEncontrado = null;
+            for (Usuario usuario : getListaUsuarios()) {
+                if(usuario.getId().equalsIgnoreCase(id)){
+                    usuarioEncontrado = usuario;
+                    break;
+                }
+            }
+            return usuarioEncontrado;
+
     }
 }

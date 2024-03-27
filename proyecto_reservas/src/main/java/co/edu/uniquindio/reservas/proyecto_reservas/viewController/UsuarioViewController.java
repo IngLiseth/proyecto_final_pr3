@@ -9,6 +9,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.util.Optional;
+
 public class UsuarioViewController {
 
 UsuarioController usuarioController;
@@ -28,16 +30,16 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     private Button btnRegistrarUsuario;
 
     @FXML
-    private TableView<UsuarioDto> tblUsuario;
+    private TableView<UsuarioDto> tblUsuario=new TableView<>();
 
     @FXML
-    private TableColumn<UsuarioDto, String> tcCedulaUsuario;
+    private TableColumn<UsuarioDto, String> tcCedulaUsuario = new TableColumn<>("Cédula");
 
     @FXML
-    private TableColumn<UsuarioDto, String> tcCorreoUsuario;
+    private TableColumn<UsuarioDto, String> tcCorreoUsuario = new TableColumn<>("Correo");
 
     @FXML
-    private TableColumn<UsuarioDto, String> tcNombreUsuario;
+    private TableColumn<UsuarioDto, String> tcNombreUsuario = new TableColumn<>("Nombre");
 
 //    @FXML
 //    private TableColumn<UsuarioDto, String> tcReservaUsuario;
@@ -59,10 +61,22 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
         usuarioController= new UsuarioController();
         intiView();
     }
+    private void intiView(){
+
+        initDataBinding();
+        obtenerUsuario();
+        tblUsuario.getItems().clear();
+        tblUsuario.setItems(listaUsuariosDto);
+        listenerSelection();
+    }
     @FXML
     public void crearUsuario (ActionEvent event ){
         agregarUsuario();
 
+    }
+    @FXML
+    void eliminarUsuaroAction(ActionEvent event) {
+        eliminarUsuario();
     }
     private void agregarUsuario(){
        UsuarioDto usuarioDto = construirUsuarioDTO ();
@@ -79,6 +93,26 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
         mostrarMensaje("Notificación usuario","Usuario no creado","Los datos ingresados son invalidos ", Alert.AlertType.ERROR);
        }
 
+    }
+
+    private void eliminarUsuario(){
+        boolean usuarioEliminado = false;
+        if(usuarioSeleccionado != null){
+            if(mostrarMensajeConfirmacion("¿Estas seguro de elmininar al usuario?")){
+                usuarioEliminado = usuarioController.eliminarUsuario(usuarioSeleccionado.id());
+                if(usuarioEliminado == true){
+                    listaUsuariosDto.remove(usuarioSeleccionado);
+                    usuarioSeleccionado = null;
+                    tblUsuario.getSelectionModel().clearSelection();
+                    limpiarCamposUsuario();
+                    mostrarMensaje("Notificación usuario", "Usuario eliminado", "El usuario se ha eliminado con éxito", Alert.AlertType.INFORMATION);
+                }else{
+                    mostrarMensaje("Notificación usuario", "usuario no eliminado", "El usuario no se puede eliminar", Alert.AlertType.ERROR);
+                }
+            }
+        }else{
+            mostrarMensaje("Notificación usuario", "usuario no seleccionado", "Seleccionado un usuario de la lista", Alert.AlertType.WARNING);
+        }
     }
 
     private void limpiarCamposUsuario() {
@@ -130,19 +164,13 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     }
 
 
-    private void intiView(){
 
-        initDataBinding();
-        obtenerUsuario();
-        tblUsuario.getItems().clear();
-        tblUsuario.setItems(listaUsuariosDto);
-        listenerSelection();
-    }
 
     private void initDataBinding() {
-        tcCedulaUsuario.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().id()));
+
         tcCorreoUsuario.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().correo()));
         tcNombreUsuario.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().nombre()));
+        tcCedulaUsuario.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().id()));
     }
 
     private void listenerSelection() {
@@ -158,6 +186,19 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
             txtContrasenaUsuario.setText(usuarioSeleccionado.contrasena());
             txtCorreoUsuario.setText(usuarioSeleccionado.correo());
             txtNombreUsuario.setText(usuarioSeleccionado.nombre());
+        }
+    }
+
+    private boolean mostrarMensajeConfirmacion(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Confirmación");
+        alert.setContentText(mensaje);
+        Optional<ButtonType> action = alert.showAndWait();
+        if (action.get() == ButtonType.OK) {
+            return true;
+        } else {
+            return false;
         }
     }
 

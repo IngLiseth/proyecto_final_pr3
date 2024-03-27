@@ -19,8 +19,8 @@ public class EventoVIPutils {
 
        Evento evento = new Evento(1, "Concierto", "concierto de Shakira" , LocalDate.of(2023,03,02), 1000, null);
 
-        Reserva reserva = new Reserva(1, usuario, evento, LocalDate.of(2023,03,12), Estado.APROBADA );
-        Reserva reserva2 = new Reserva(1, usuario2, evento, LocalDate.of(2023,04,12), Estado.RECHAZADA );
+        Reserva reserva = new Reserva("1", usuario, evento, LocalDate.of(2023,03,12), Estado.APROBADA );
+        Reserva reserva2 = new Reserva("1", usuario2, evento, LocalDate.of(2023,04,12), Estado.RECHAZADA );
 
         List <Reserva> reservas = new ArrayList<>();
         reservas.add(reserva);
@@ -36,7 +36,7 @@ public class EventoVIPutils {
         usuarios.add(usuario3);
 
 
-        eventoVIP.setListaEventos(usuarios);
+        eventoVIP.setListaUsuarios(usuarios);
         return eventoVIP;
     }
 }

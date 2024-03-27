@@ -29,8 +29,9 @@ import java.util.List;
         return modelFactoryController.crearUsuario(usuarioDto);    }
 
     @Override
-    public boolean eliminarUsuario(String id) {
-        return false;
+    public boolean eliminarUsuario(String id)
+    {
+        return modelFactoryController.eliminarUsuario(id);
     }
 
     @Override
