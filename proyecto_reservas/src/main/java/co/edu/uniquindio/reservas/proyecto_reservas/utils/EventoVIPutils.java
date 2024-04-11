@@ -15,7 +15,7 @@ public class EventoVIPutils {
         Usuario usuario2 = new Usuario("12345","Liseth", "liseth@gmail.com","123");
         Usuario usuario3 = new Usuario("12346","sara", "sara@gmail.com","123");
 
-        Empleado empleado = new Empleado("23","alfonso","asd@23","mesero");
+        Empleado empleado = new Empleado("23","alfonso","asd@23","abc","mesero");
 
        Evento evento = new Evento(1, "Concierto", "concierto de Shakira" , LocalDate.of(2023,03,02), 1000, null);
 

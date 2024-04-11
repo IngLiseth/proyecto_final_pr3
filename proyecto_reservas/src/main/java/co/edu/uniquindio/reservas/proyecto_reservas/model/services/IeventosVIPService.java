@@ -2,6 +2,7 @@ package co.edu.uniquindio.reservas.proyecto_reservas.model.services;
 
 import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.UsuarioExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.Persona;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario;
 
 public interface IeventosVIPService {
@@ -10,5 +11,6 @@ public interface IeventosVIPService {
     boolean eliminarUsuario(String id) throws UsuarioExceptions;
     boolean consultarUsuario(String id) throws UsuarioExceptions;
     Usuario obtenerUsuario(String id);
+    Persona validarPersona(String email, String password, String tipoUsuario);
 
 }

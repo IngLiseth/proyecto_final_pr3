@@ -1,14 +1,13 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.controller;
 
+import co.edu.uniquindio.reservas.proyecto_reservas.controller.factory.ModelFactoryController;
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.services.IModelFactoryService;
+import co.edu.uniquindio.reservas.proyecto_reservas.controller.services.IUsuarioService;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
-import co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario;
-import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IeventosVIPService;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class UsuarioController  implements IModelFactoryService {
+public class UsuarioController  implements IUsuarioService {
     ModelFactoryController modelFactoryController;
     public UsuarioController(){
         modelFactoryController= ModelFactoryController.getInstance();

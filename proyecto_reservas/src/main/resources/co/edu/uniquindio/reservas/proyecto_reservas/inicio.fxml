@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox prefHeight="400.0" prefWidth="600.0"
+      spacing="30"
+      alignment="CENTER"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.reservas.proyecto_reservas.viewController.InicioViewController">
+
+    <GridPane vgap="20.0" hgap="20.0" alignment="CENTER">
+
+        <Label text="Seleccione tipo usuario" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="listaTipos" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label  text="Correo" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="txtCorreo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label  text="Contraseña" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <PasswordField fx:id="txtContrasena" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="20.0">
+        <Button  mnemonicParsing="false" text="Login" onAction="#autenticarPersona" />
+        <Button  mnemonicParsing="false" text="Registro" onAction="#registrarPersona" />
+    </HBox>
+
+
+
+
+
+
+
+
+
+
+</VBox>

@@ -1,0 +1,6 @@
+abr 09, 2024 5:07:44 P. M. co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP escribirLog
+INFO: La persona Persona{id='1234', nombre='Alfonso', correo='alfonso@gmail.com', contrasena='123'} con el rol Usuario ha ingresado al sistema
+abr 09, 2024 5:08:40 P. M. co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP escribirLog
+INFO: La persona Persona{id='1234', nombre='Alfonso', correo='alfonso@gmail.com', contrasena='123'} con el rol Usuario ha ingresado al sistema
+abr 09, 2024 5:13:05 P. M. co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP escribirLog
+SEVERE: Los datos de acceso abc y abc son incorrectos

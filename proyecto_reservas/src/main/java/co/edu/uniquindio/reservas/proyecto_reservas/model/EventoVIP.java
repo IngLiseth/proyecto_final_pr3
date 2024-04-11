@@ -1,13 +1,21 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
 import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.UsuarioExceptions;
-import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
+import co.edu.uniquindio.reservas.proyecto_reservas.HelloApplication;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IeventosVIPService;
 
+import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class EventoVIP implements IeventosVIPService {
+
+    private static final Logger LOGGER = Logger.getLogger(EventoVIP.class.getName());
 
     private List<Usuario> listaUsuarios= new ArrayList<>();
     private  List<Empleado> listaEmpleados= new ArrayList<>();
@@ -15,7 +23,9 @@ public class EventoVIP implements IeventosVIPService {
     private  List<Evento> listaReservas= new ArrayList<>();
 
 
-    public void EventosVIP(){}
+    public void EventosVIP(){
+        //UUID.randomUUID();
+    }
 
 
     // metodos de acceso
@@ -65,6 +75,8 @@ public class EventoVIP implements IeventosVIPService {
             usuarioActual.setNombre(usuario.getNombre());
             usuarioActual.setCorreo(usuario.getCorreo());
             usuarioActual.setContrasena(usuario.getContrasena());
+
+            escribirLog(Level.INFO, "La persona "+usuario+ " ha actualizado sus datos");
             return true;
         }
     }
@@ -138,4 +150,68 @@ public class EventoVIP implements IeventosVIPService {
             return usuarioEncontrado;
 
     }
+
+    @Override
+    public Persona validarPersona(String email, String password, String tipoPersona) {
+
+        Persona persona = null;
+
+        if(tipoPersona.equals("Usuario")){
+            persona = buscarUsuario(email, password);
+        }else if(tipoPersona.equals("Empleado")){
+            persona = buscarEmpleado(email, password);
+        }else if(tipoPersona.equals("Admin")){
+            persona = buscarAdmin(email, password);
+        }
+
+       // String cadenas = usuario.getNombre()+"@@"+usuario.getCorreo()+"@@".... con for para hacer el segundo punto
+
+        if(persona!=null){
+            escribirLog(Level.INFO, "La persona "+persona+ " con el rol "+tipoPersona+" ha ingresado al sistema");
+        }else{
+            escribirLog(Level.SEVERE, "Los datos de acceso "+email+" y "+password+" son incorrectos");
+        }
+
+        return persona;
+    }
+
+    private Persona buscarAdmin(String email, String password) {
+        return null;
+    }
+
+    private Persona buscarEmpleado(String email, String password) {
+        for(Empleado e : listaEmpleados){
+            if( e.getCorreo().equals(email) && e.getContrasena().equals(password) ){
+                return e;
+            }
+        }
+        return  null;
+    }
+
+    private Persona buscarUsuario(String email, String password) {
+        for(Usuario u : listaUsuarios){
+            if( u.getCorreo().equals(email) && u.getContrasena().equals(password) ){
+                return u;
+            }
+        }
+        return  null;
+    }
+
+    public void escribirLog( Level tipo, String mensaje){
+
+        try {
+            FileHandler archivo;
+            URL resourceURL = HelloApplication.class.getResource("/persistencia/log/mylog.txt");
+            String archivoLeido = new File(resourceURL.getFile()).getAbsolutePath();
+
+            archivo = new FileHandler(archivoLeido, true);
+            archivo.setFormatter(new SimpleFormatter());
+            LOGGER.addHandler(archivo);
+            LOGGER.log(tipo, mensaje);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
 }
