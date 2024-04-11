@@ -1,6 +1,5 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.controller;
 
-import co.edu.uniquindio.reservas.proyecto_reservas.controller.factory.ModelFactoryController;
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.services.ILoginService;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.Persona;
 

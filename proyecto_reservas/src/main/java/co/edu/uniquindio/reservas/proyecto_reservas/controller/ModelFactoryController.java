@@ -1,4 +1,4 @@
-package co.edu.uniquindio.reservas.proyecto_reservas.controller.factory;
+package co.edu.uniquindio.reservas.proyecto_reservas.controller;
 
 import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.UsuarioExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.HelloApplication;

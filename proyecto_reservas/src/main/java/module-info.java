@@ -17,5 +17,7 @@ module co.edu.uniquindio.reservas.proyecto_reservas {
     opens co.edu.uniquindio.reservas.proyecto_reservas.viewController to javafx.fxml;
     exports co.edu.uniquindio.reservas.proyecto_reservas.controller.factory;
     opens co.edu.uniquindio.reservas.proyecto_reservas.controller.factory to javafx.fxml;
+    exports co.edu.uniquindio.reservas.proyecto_reservas.controller.services;
+    opens co.edu.uniquindio.reservas.proyecto_reservas.controller.services to javafx.fxml;
 
 }
