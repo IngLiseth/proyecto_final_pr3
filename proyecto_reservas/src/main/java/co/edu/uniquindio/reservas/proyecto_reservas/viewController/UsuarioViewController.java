@@ -1,6 +1,7 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.viewController;
 
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.UsuarioController;
+import co.edu.uniquindio.reservas.proyecto_reservas.controller.factory.ModelFactoryController;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -13,6 +14,7 @@ import java.util.Optional;
 
 public class UsuarioViewController {
 
+    ModelFactoryController modelFactoryController;
 UsuarioController usuarioController;
 ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList();
  UsuarioDto usuarioSeleccionado;
@@ -70,10 +72,7 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
         listenerSelection();
     }
     @FXML
-    public void crearUsuario (ActionEvent event ){
-        agregarUsuario();
-
-    }
+    public void crearUsuario (ActionEvent event ){agregarUsuario();}
     @FXML
     void eliminarUsuaroAction(ActionEvent event) {
         eliminarUsuario();
@@ -95,6 +94,7 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
             mostrarMensaje("Notificación usuario","Usuario no encontrado","El usuario no éxiste", Alert.AlertType.ERROR);
         }
     }
+
     private void agregarUsuario(){
        UsuarioDto usuarioDto = construirUsuarioDTO ();
        if(datosValidos(usuarioDto)){
@@ -106,7 +106,6 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
                mostrarMensaje("Notificación usuario","Usuario no creado","El usuario no se ha creado con éxito", Alert.AlertType.ERROR);
                }
        }else {
-
         mostrarMensaje("Notificación usuario","Usuario no creado","Los datos ingresados son invalidos ", Alert.AlertType.ERROR);
        }
 
@@ -116,6 +115,8 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
         boolean usuarioEliminado = false;
         if(usuarioSeleccionado != null){
             if(mostrarMensajeConfirmacion("¿Estas seguro de elmininar al usuario?")){
+                ModelFactoryController.registrarAccionesSistema("Se confirmo la eliminacion del usuario con id:"+usuarioSeleccionado.id()+" y de nombre:  "+ usuarioSeleccionado.nombre(),
+                        1,"eliminarUsuario, clase:UsuarioVewController");
                 usuarioEliminado = usuarioController.eliminarUsuario(usuarioSeleccionado.id());
                 if(usuarioEliminado == true){
                     listaUsuariosDto.remove(usuarioSeleccionado);
@@ -153,8 +154,9 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     public void actualizarUsuario( ){
         boolean UsuarioActualizado = false;
         //1. Capturar los datos
-        String idActual = usuarioSeleccionado.id();
+       // String idActual = usuarioSeleccionado.id(); // actualiza todo
         UsuarioDto usuarioDto = construirUsuarioDTO();
+        String idActual = usuarioDto.id(); // actualiza todo menos la cedula
         //2. verificar el empleado seleccionado
         if(usuarioSeleccionado != null){
             //3. Validar la información
@@ -173,10 +175,10 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
                 mostrarMensaje("Notificación usuario", "usuario no creado", "Los datos ingresados son invalidos", Alert.AlertType.ERROR);
             }
 
+        }else{
+            mostrarMensaje("Notificación usuario", "usuario no seleccionado", "Seleccionado un usuario de la lista", Alert.AlertType.WARNING);
+
         }
-
-
-
 
     }
     private boolean datosValidos(UsuarioDto usuarioDto) {

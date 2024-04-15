@@ -9,12 +9,17 @@ import co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.Persona;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario;
 import co.edu.uniquindio.reservas.proyecto_reservas.utils.EventoVIPutils;
+import co.edu.uniquindio.reservas.proyecto_reservas.utils.Persistencia;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+
+import static co.edu.uniquindio.reservas.proyecto_reservas.utils.Persistencia.cargarRecursoReservaVIPXML;
 
 
 public class ModelFactoryController implements IModelFactoryService {
@@ -23,8 +28,35 @@ public class ModelFactoryController implements IModelFactoryService {
     MapperUsuario mapperUsuario;
 
     public ModelFactoryController() {
-        inicializarDatos();
+
         mapperUsuario = new MapperUsuario();
+        //1. inicializar datos y luego guardarlo en archivos
+        System.out.println("invocación clase singleton");
+        //inicializarDatos();
+        //salvarDatosPrueba();
+
+        //2. Cargar los datos de los archivo
+       // cargarDatosDesdeArchivos();
+
+        //3. Guardar y Cargar el recurso serializable binario
+      // cargarResourceBinario();
+       //guardarResourceBinario();
+
+        //4. Guardar y Cargar el recurso serializable XML
+       //guardarResourceXML();
+        cargarResourceXML();
+
+        //Siempre se debe verificar si la raiz del recurso es null
+
+        crearCopiaSeguridadUsuario();
+        crearCopiaSeguridadXML();
+        crearCopiaSeguridadBinario();
+        crearCopiaSeguridadLOG();
+
+       if(eventoVIP == null){
+          inicializarDatos();
+          guardarResourceXML();
+        }
     }
 
     @Override
@@ -32,9 +64,13 @@ public class ModelFactoryController implements IModelFactoryService {
         try{
             Usuario usuario =mapperUsuario.usuarioDtoTousario(usuarioDto);
             getEventoVIP().actualizarUsuario(id,usuario);
+            salvarDatosPrueba();
+            guardarResourceXML();
+            guardarResourceBinario();
+            registrarAccionesSistema("Actualizacion con exito del usuario "+usuario.getNombre()+" con cedula: "+id+" ", 1, "actualizarUsuario, Clase: ModelFactoryController ");
             return true;
         }catch (UsuarioExceptions e){
-            e.printStackTrace();
+            registrarAccionesSistema(e.getMessage(), 2, "actualizarUsuario, Clase: ModelFactoryController ");
             return false;
         }
     }
@@ -45,14 +81,16 @@ public class ModelFactoryController implements IModelFactoryService {
             if(!eventoVIP.verificarUsuarioExistente(usuarioDto.id())) {
                 Usuario usuario = mapperUsuario.usuarioDtoTousario(usuarioDto);
                 getEventoVIP().crearUsuario(usuario);
-
+                salvarDatosPrueba();
+                guardarResourceXML();
+                guardarResourceBinario();
+                registrarAccionesSistema("Creacion con exito del usuario "+usuario.getNombre()+" con cedula: "+usuario.getId()+" ", 1, "crearUsuario, Clase: ModelFactoriController");
             }
             return true;
 
         }catch (UsuarioExceptions exceptions){
-            exceptions.getMessage();
+            registrarAccionesSistema(exceptions.getMessage(), 2, "crearUsuario ,clase:ModelFactoryController");
             return false;
-
         }
     }
 
@@ -61,9 +99,13 @@ public class ModelFactoryController implements IModelFactoryService {
         boolean flagExiste = false;
         try {
             flagExiste = getEventoVIP().eliminarUsuario(id);
+            salvarDatosPrueba();
+            guardarResourceXML();
+            guardarResourceBinario();
+            registrarAccionesSistema("Eliminacion con exito del usuario con cedula: "+id+" ", 1, "eliminarUsuario, Clase: ModelFactoryController");
         } catch (UsuarioExceptions e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            registrarAccionesSistema(e.getMessage(), 2, "eliminarUsuario, Clase: ModelFactoryController");
         }
         return flagExiste;
     }
@@ -73,9 +115,10 @@ public class ModelFactoryController implements IModelFactoryService {
         boolean existe = false;
         try {
             existe = getEventoVIP().consultarUsuario(id);
+            registrarAccionesSistema("El usuario a consultar existe con cedula: "+id+" ", 1, "consultarUsuario, Clase: ModelFactoryController");
         } catch (UsuarioExceptions e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+            registrarAccionesSistema(e.getMessage(), 2, "consultarUsuario, Clase: ModelFactoryController");
         }
         return existe;
     }
@@ -98,19 +141,22 @@ public class ModelFactoryController implements IModelFactoryService {
 
                 if (persona != null) {
                     navegarVentana("empresaReservas.fxml");
+                    registrarAccionesSistema("Inicio de sesión por "+tipoUsuario+ " con correo "+email, 1, "validarPersona, clase: ModelFactoryController");
+
                 } else {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Alerta");
                     alert.setContentText("Sus datos de acceso son incorrectos");
                     alert.show();
-                }
+                    registrarAccionesSistema("Datos invalidos al Inicio de sesión: "+tipoUsuario+ " con correo "+email, 2, "validarPersona, clase: ModelFactoryController");
 
+                }
             }
 
         }catch (Exception e){
             e.printStackTrace();
+            registrarAccionesSistema(e.getMessage(), 2, "validarPersona, clase: ModelFactoryController");
         }
-
         return null;
     }
 
@@ -126,9 +172,6 @@ public class ModelFactoryController implements IModelFactoryService {
 
 
 
-    private void inicializarDatos() {
-        eventoVIP = EventoVIPutils.inicializar();
-    }
 
     public List<UsuarioDto> obtenerUsuario() {
         return mapperUsuario.ListausuarioToUsuarioDto(eventoVIP.getListaUsuarios());
@@ -160,6 +203,64 @@ public class ModelFactoryController implements IModelFactoryService {
         stage.setScene(scene);
         stage.show();
 
+    }
+
+    private void inicializarDatos() {
+        eventoVIP = EventoVIPutils.inicializar();
+    }
+
+
+    // peristencias ******************
+    //XML
+    private void guardarResourceXML() {
+        Persistencia.guardarRecursoReservaVIPXML(eventoVIP);
+    }
+    private void cargarResourceXML() {
+        eventoVIP = Persistencia.cargarRecursoReservaVIPXML();
+    }
+
+    //log
+    public static void registrarAccionesSistema(String mensaje, int nivel, String accion) {
+        Persistencia.guardaRegistroLog(mensaje, nivel, accion);
+    }
+
+    //txt
+    private void salvarDatosPrueba() {
+        try {
+            Persistencia.guardarUsuario((ArrayList<Usuario>) getEventoVIP().getListaUsuarios());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private void cargarDatosDesdeArchivos() {
+        eventoVIP = new EventoVIP();
+        try {
+            Persistencia.cargarDatosArchivos(eventoVIP);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    // binario
+    private void guardarResourceBinario() {
+        Persistencia.guardarRecursoEventoVIPBinario(getEventoVIP());
+    }
+    private void cargarResourceBinario() {
+        eventoVIP = Persistencia.cargarRecursoEventoVIPBinario();
+    }
+
+    //copias
+    private void crearCopiaSeguridadUsuario(){
+        Persistencia.crearCopiaSeguridad(1);
+    }
+    private void crearCopiaSeguridadXML(){
+        Persistencia.crearCopiaSeguridad(2);
+    }
+    private void crearCopiaSeguridadBinario(){
+        Persistencia.crearCopiaSeguridad(3);
+    }
+    private void crearCopiaSeguridadLOG(){
+        Persistencia.crearCopiaSeguridad(4);
     }
 
 }

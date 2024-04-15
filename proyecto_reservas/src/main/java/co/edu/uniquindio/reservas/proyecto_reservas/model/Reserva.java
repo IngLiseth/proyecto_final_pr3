@@ -1,8 +1,10 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Reserva {
+public class Reserva implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String id;
     private Usuario usuario;
     private Evento evento;
@@ -15,6 +17,9 @@ public class Reserva {
         this.evento = evento;
         this.fechaDeSolicitud = fechaDeSolicitud;
         this.estado = estado;
+    }
+    public Reserva(){
+
     }
 
 

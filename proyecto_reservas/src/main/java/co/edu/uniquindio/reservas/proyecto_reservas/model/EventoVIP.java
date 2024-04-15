@@ -5,6 +5,7 @@ import co.edu.uniquindio.reservas.proyecto_reservas.HelloApplication;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IeventosVIPService;
 
 import java.io.File;
+import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,23 +14,28 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class EventoVIP implements IeventosVIPService {
+public class EventoVIP implements IeventosVIPService, Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private static final Logger LOGGER = Logger.getLogger(EventoVIP.class.getName());
 
-    private List<Usuario> listaUsuarios= new ArrayList<>();
-    private  List<Empleado> listaEmpleados= new ArrayList<>();
-    private List<Reserva> listaEventos= new ArrayList<>();
-    private  List<Evento> listaReservas= new ArrayList<>();
+    List<Usuario> listaUsuarios= new ArrayList<>();
+    List<Empleado> listaEmpleados= new ArrayList<>();
+    List<Reserva> listaEventos= new ArrayList<>();
+    List<Evento> listaReservas= new ArrayList<>();
 
 
-    public void EventosVIP(){
-        //UUID.randomUUID();
+//    public void EventoVIP(){
+//        //UUID.randomUUID();
+//    }
+
+    public EventoVIP(){
+
     }
 
-
     // metodos de acceso
-    public List<Usuario> getListaUsuarios() {
+    public  List<Usuario> getListaUsuarios() {
         return listaUsuarios;
     }
 
@@ -68,15 +74,13 @@ public class EventoVIP implements IeventosVIPService {
     public boolean actualizarUsuario(String id, Usuario usuario) throws UsuarioExceptions {
         Usuario usuarioActual= obtenerUsuario(id);
         if (usuarioActual== null){
-            throw new UsuarioExceptions("El usuario a actualizar no existe");
+            throw new UsuarioExceptions("El usuario: "+usuario.getNombre()+" con id: "+id+ "a actualizar no existe");
 
         }else{
             usuarioActual.setId(usuario.getId());
             usuarioActual.setNombre(usuario.getNombre());
             usuarioActual.setCorreo(usuario.getCorreo());
             usuarioActual.setContrasena(usuario.getContrasena());
-
-            escribirLog(Level.INFO, "La persona "+usuario+ " ha actualizado sus datos");
             return true;
         }
     }
@@ -92,7 +96,7 @@ public class EventoVIP implements IeventosVIPService {
         boolean flagExiste = false;
         usuario = obtenerUsuario(id);
         if(usuario == null)
-            throw new UsuarioExceptions("El usuario a eliminar no existe");
+            throw new UsuarioExceptions("No existe el usuario a eliminar con cedula: "+id+" ");
         else{
             getListaUsuarios().remove(usuario);
             flagExiste = true;
@@ -105,7 +109,7 @@ public class EventoVIP implements IeventosVIPService {
         if (usuarioExiste(id)) {
             return true;
         }else {
-            throw new UsuarioExceptions("El usuario con cédula" + id + "ya existe");
+            throw new UsuarioExceptions(" El usuario con cédula " + id + " NO  existe ");
         }
     }
     public Usuario obtenerUnUsuario(String id){
@@ -121,7 +125,7 @@ public class EventoVIP implements IeventosVIPService {
 
     public boolean verificarUsuarioExistente(String id)  throws UsuarioExceptions {
         if ( usuarioExiste(id)) {
-            throw new UsuarioExceptions("El usuario con cédula" + id + "ya existe");
+            throw new UsuarioExceptions(" El usuario con cédula " + id + " ya existe ");
         }else {
             return false;
         }
@@ -142,7 +146,7 @@ public class EventoVIP implements IeventosVIPService {
     public Usuario obtenerUsuario(String id) {
             Usuario usuarioEncontrado = null;
             for (Usuario usuario : getListaUsuarios()) {
-                if(usuario.getId().equalsIgnoreCase(id)){
+                if(usuario.getId().equals(id)){
                     usuarioEncontrado = usuario;
                     break;
                 }
@@ -201,7 +205,7 @@ public class EventoVIP implements IeventosVIPService {
 
         try {
             FileHandler archivo;
-            URL resourceURL = HelloApplication.class.getResource("/persistencia/log/mylog.txt");
+            URL resourceURL = HelloApplication.class.getResource("/persistencia/log/proyecto_Reservas_log.txt");
             String archivoLeido = new File(resourceURL.getFile()).getAbsolutePath();
 
             archivo = new FileHandler(archivoLeido, true);
@@ -211,7 +215,5 @@ public class EventoVIP implements IeventosVIPService {
         }catch (Exception e){
             e.printStackTrace();
         }
-
     }
-
 }
