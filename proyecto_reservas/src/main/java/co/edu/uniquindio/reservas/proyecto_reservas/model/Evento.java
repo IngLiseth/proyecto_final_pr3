@@ -1,10 +1,12 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Evento {
+public class Evento implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int id;
     private String nombre;
     private String descripcion;
@@ -21,6 +23,9 @@ public class Evento {
         this.capacidadMaxima = capacidadMaxima;
         this.empleadoEncargado = empleadoEncargado;
         this.reservasDelEvento = new ArrayList<>();
+    }
+    public Evento(){
+
     }
 
     public List<Reserva> getReservasDelEvento() {

@@ -5,6 +5,7 @@ module co.edu.uniquindio.reservas.proyecto_reservas {
     requires org.controlsfx.controls;
     requires org.mapstruct;
     requires java.logging;
+    requires java.desktop;
 
     opens co.edu.uniquindio.reservas.proyecto_reservas to javafx.fxml;
     exports co.edu.uniquindio.reservas.proyecto_reservas;

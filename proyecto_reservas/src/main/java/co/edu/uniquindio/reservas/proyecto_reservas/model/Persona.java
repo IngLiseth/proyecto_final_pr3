@@ -1,6 +1,9 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona  implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String id;
     private String nombre;
     private String correo;
@@ -11,6 +14,8 @@ public class Persona {
         this.nombre = nombre;
         this.correo = correo;
         this.contrasena = contrasena;
+    }
+    public Persona(){
     }
 
     public String getId() {
