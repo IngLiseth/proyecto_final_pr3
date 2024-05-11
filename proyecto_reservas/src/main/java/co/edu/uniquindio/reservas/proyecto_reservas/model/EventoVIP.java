@@ -1,9 +1,11 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
+import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.EventoExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.UsuarioExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.HelloApplication;
+import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.EventoDto;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IeventosServiceModel;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IeventosVIPService;
-
 import java.io.File;
 import java.io.Serializable;
 import java.net.URL;
@@ -14,7 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class EventoVIP implements IeventosVIPService, Serializable {
+public class EventoVIP implements IeventosVIPService ,IeventosServiceModel, Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -22,8 +24,8 @@ public class EventoVIP implements IeventosVIPService, Serializable {
 
     List<Usuario> listaUsuarios= new ArrayList<>();
     List<Empleado> listaEmpleados= new ArrayList<>();
-    List<Reserva> listaEventos= new ArrayList<>();
-    List<Evento> listaReservas= new ArrayList<>();
+    List<Evento> listaEventos= new ArrayList<>();
+    List<Reserva> listaReservas= new ArrayList<>();
 
 
 //    public void EventoVIP(){
@@ -51,19 +53,19 @@ public class EventoVIP implements IeventosVIPService, Serializable {
         this.listaEmpleados = listaEmpleados;
     }
 
-    public List<Reserva> getListaEventos() {
+    public List<Evento> getListaEventos() {
         return listaEventos;
     }
 
-    public void setListaEventos(List<Reserva> listaEventos) {
+    public void setListaEventos(List<Evento> listaEventos) {
         this.listaEventos = listaEventos;
     }
 
-    public List<Evento> getListaReservas() {
+    public List<Reserva> getListaReservas() {
         return listaReservas;
     }
 
-    public void setListaReservas(List<Evento> listaReservas) {
+    public void setListaReservas(List<Reserva> listaReservas) {
         this.listaReservas = listaReservas;
     }
 
@@ -168,6 +170,10 @@ public class EventoVIP implements IeventosVIPService, Serializable {
             persona = buscarAdmin(email, password);
         }
 
+        //Sesión de usuario
+        Sesion sesion = Sesion.getIntancia();
+        sesion.setPersona(persona);
+
        // String cadenas = usuario.getNombre()+"@@"+usuario.getCorreo()+"@@".... con for para hacer el segundo punto
 
         if(persona!=null){
@@ -216,4 +222,96 @@ public class EventoVIP implements IeventosVIPService, Serializable {
             e.printStackTrace();
         }
     }
+// TODO REFERENTE A  CRUD DE EVENTOS
+    @Override
+    public boolean actualizarEvento(String id,Evento evento) throws EventoExceptions {
+        Evento eventoactual=obtenerEvento(id);
+        if (eventoactual== null){
+            throw new EventoExceptions("El evento:"+evento.getNombre()+" con id: "+id+ "a actualizar no existe");
+
+        }else{
+            eventoactual.setId(evento.getId());
+            eventoactual.setNombre(evento.getNombre());
+            eventoactual.setDescripcion(evento.getDescripcion());
+            eventoactual.setCapacidadMaxima(evento.getCapacidadMaxima());
+            eventoactual.setFecha(evento.getFecha());
+            eventoactual.setEmpleadoEncargado(evento.getEmpleadoEncargado());
+            return true;
+        }
+
+    }
+
+    @Override
+    public boolean crearEvento(Evento evento) {
+        System.out.println( evento.getFecha() );
+            getListaEventos().add(evento);
+
+        return false;
+    }
+
+    @Override
+    public boolean eliminarEvento(String id) throws EventoExceptions {
+        Evento evento = null;
+        boolean flagExiste = false;
+        evento = obtenerEvento(id);
+        if(evento == null)
+            throw new EventoExceptions("No existe el evento con el id:"+id+" ");
+        else{
+            getListaEventos().remove(evento);
+            flagExiste = true;
+        }
+        return flagExiste;
+    }
+
+    @Override
+    public boolean consultarEvento(String id) throws EventoExceptions {
+        if (eventoExiste(id)) {
+            return true;
+        }else {
+            throw new EventoExceptions(" El evento con id:" + id + " NO  existe ");
+        }
+    }
+
+    @Override
+    public Evento obtenerEvento(String id) {
+        Evento eventoEcontrado = null;
+        for (Evento evento : getListaEventos()) {
+            if(evento.getId().equals(id)){
+                eventoEcontrado =evento ;
+                break;
+            }
+        }
+        return eventoEcontrado;
+
+    }
+
+    public boolean verificarEventoExistente(String id)  throws EventoExceptions {
+        if (eventoExiste(id)) {
+            throw new EventoExceptions(" El evento con id " + id + " ya existe ");
+        }else {
+            return false;
+        }
+    }
+    private boolean eventoExiste(String id) {
+        boolean eventoExiste = false;
+        for (Evento evento: getListaEventos()) {
+            if (evento.getId().equalsIgnoreCase(id)){
+                eventoExiste = true;
+                break;
+            }
+        }
+        return  eventoExiste;
+    }
+    public Evento obtenerUnEvento(String id){
+        Evento eventoObtenido=null;
+        for(Evento evento:getListaEventos()){
+            if(evento.getId().equals(id)){
+                eventoObtenido = evento;
+                break;
+            }
+        }
+        return eventoObtenido;
+    }
+
+
 }

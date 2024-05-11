@@ -45,6 +45,10 @@ public class InicioViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        txtCorreo.setText("alfonso@gmail.com");
+        txtContrasena.setText("123");
+
         inicioController = new InicioController();
         listaTipos.setItems(FXCollections.observableArrayList( List.of("Usuario", "Empleado", "Admin") ));
     }

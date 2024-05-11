@@ -1,0 +1,12 @@
+
+abr 15, 2024 4:34:33 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-04-15
+abr 15, 2024 4:35:02 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearUsuario, Clase: ModelFactoriController,Creacion con exito del usuario pablo con cedula: 1254 ,2024-04-15
+abr 15, 2024 4:35:13 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: consultarUsuario, Clase: ModelFactoryController, El usuario con cédula 888889999 NO  existe ,2024-04-15
+abr 30, 2024 4:55:21 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+WARNING: validarPersona, clase: ModelFactoryController,
+/C:/td/pr3/repositorios/proyecto_final_pr3/proyecto_reservas/target/classes/co/edu/uniquindio/reservas/proyecto_reservas/eventoView.fxml
+/C:/td/pr3/repositorios/proyecto_final_pr3/proyecto_reservas/target/classes/co/edu/uniquindio/reservas/proyecto_reservas/empresaReservas.fxml:28
+,2024-04-30

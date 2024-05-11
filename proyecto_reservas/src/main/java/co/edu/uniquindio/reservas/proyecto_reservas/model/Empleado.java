@@ -37,4 +37,9 @@ public class Empleado extends Persona implements Serializable {
     public void agregarEventos(Evento evento) {
         this.listaDeEventos.add(evento);
     }
+
+    @Override
+    public String toString() {
+        return this.getId()+": "+this.getNombre();
+    }
 }

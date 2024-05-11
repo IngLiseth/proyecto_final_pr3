@@ -20,15 +20,15 @@ public class Persistencia
 
     //bancoUq/src/main/resources/persistencia/archivoClientes.txt
 
-    public static final String RUTA_ARCHIVO_LOG = "proyecto_reservas/src/main/resources/persistencia/log/proyecto_Reservas_log.txt";
-    public static final String RUTA_ARCHIVO_USUARIOS = "proyecto_reservas/src/main/resources/persistencia/archivos/usuario.txt";
-   public static final String RUTA_ARCHIVO_MODELO_RESERVAVIP_BINARIO = "proyecto_reservas/src/main/resources/persistencia/model.bin";
-    public static final String RUTA_ARCHIVO_MODELO_RESERVAVIP_XML = "proyecto_reservas/src/main/resources/persistencia/model.xml";
+    public static final String RUTA_ARCHIVO_LOG = "src/main/resources/persistencia/log/proyecto_Reservas_log.txt";
+    public static final String RUTA_ARCHIVO_USUARIOS = "src/main/resources/persistencia/archivos/usuario.txt";
+   public static final String RUTA_ARCHIVO_MODELO_RESERVAVIP_BINARIO = "src/main/resources/persistencia/model.bin";
+    public static final String RUTA_ARCHIVO_MODELO_RESERVAVIP_XML = "src/main/resources/persistencia/model.xml";
 
-    public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_USUARIOS = "proyecto_reservas/src/main/resources/persistencia/respaldo/usuarioCopia.txt";
-    public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_MODEL_XML = "proyecto_reservas/src/main/resources/persistencia/respaldo/modelCopia.XML";
-    public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_MODEL_BINARIO = "proyecto_reservas/src/main/resources/persistencia/respaldo/modelCopia.bin";
-    public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_LOG = "proyecto_reservas/src/main/resources/persistencia/respaldo/proyecto_Reservas_Copia_log.txt";
+    public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_USUARIOS = "src/main/resources/persistencia/respaldo/usuarioCopia.txt";
+    public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_MODEL_XML = "src/main/resources/persistencia/respaldo/modelCopia.XML";
+    public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_MODEL_BINARIO = "src/main/resources/persistencia/respaldo/modelCopia.bin";
+    public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_LOG = "src/main/resources/persistencia/respaldo/proyecto_Reservas_Copia_log.txt";
 
 //	C:\td\persistencia
 
@@ -269,22 +269,22 @@ public class Persistencia
 
         switch (num) {
             case 1:
-                String rutaCopiaSeguridadUsuario = "proyecto_reservas/src/main/resources/persistencia/respaldo/usuarioCopia_"+ fechaFormateada +".txt";
+                String rutaCopiaSeguridadUsuario = "src/main/resources/persistencia/respaldo/usuarioCopia_"+ fechaFormateada +".txt";
                 ArchivoUtil.crearCopiaSeguridad(RUTA_ARCHIVO_USUARIOS,rutaCopiaSeguridadUsuario);
                // ArchivoUtil.crearCopiaSeguridad(RUTA_ARCHIVO_USUARIOS,RUTA_ARCHIVO_COPIA_SEGURIDAD_USUARIOS);
                 break;
             case 2:
-                String rutaCopiaSeguridadModelXml = "proyecto_reservas/src/main/resources/persistencia/respaldo/modelCopia_"+ fechaFormateada +".xml";
+                String rutaCopiaSeguridadModelXml = "src/main/resources/persistencia/respaldo/modelCopia_"+ fechaFormateada +".xml";
                 ArchivoUtil.crearCopiaSeguridad(RUTA_ARCHIVO_MODELO_RESERVAVIP_XML,rutaCopiaSeguridadModelXml);
               //  ArchivoUtil.crearCopiaSeguridad(RUTA_ARCHIVO_MODELO_RESERVAVIP_XML,RUTA_ARCHIVO_COPIA_SEGURIDAD_MODEL_XML);
                 break;
             case 3:
-                String rutaCopiaSeguridadModelBin = "proyecto_reservas/src/main/resources/persistencia/respaldo/modelCopia_"+ fechaFormateada +".bin";
+                String rutaCopiaSeguridadModelBin = "src/main/resources/persistencia/respaldo/modelCopia_"+ fechaFormateada +".bin";
                 ArchivoUtil.crearCopiaSeguridad(RUTA_ARCHIVO_MODELO_RESERVAVIP_BINARIO,rutaCopiaSeguridadModelBin);
                 //ArchivoUtil.crearCopiaSeguridad(RUTA_ARCHIVO_MODELO_RESERVAVIP_BINARIO,RUTA_ARCHIVO_COPIA_SEGURIDAD_MODEL_BINARIO);
                 break;
             case 4:
-                String rutaCopiaSeguridadLog = "proyecto_reservas/src/main/resources/persistencia/respaldo/proyectoReservasCopia_log_"+ fechaFormateada +".txt";
+                String rutaCopiaSeguridadLog = "src/main/resources/persistencia/respaldo/proyectoReservasCopia_log_"+ fechaFormateada +".txt";
                 ArchivoUtil.crearCopiaSeguridad(RUTA_ARCHIVO_LOG,rutaCopiaSeguridadLog);
                 //ArchivoUtil.crearCopiaSeguridad(RUTA_ARCHIVO_LOG,RUTA_ARCHIVO_COPIA_SEGURIDAD_LOG);
                 break;

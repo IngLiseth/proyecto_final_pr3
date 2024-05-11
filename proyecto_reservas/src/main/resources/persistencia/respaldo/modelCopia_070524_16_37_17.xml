@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="21.0.2" class="java.beans.XMLDecoder">
+ <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP" id="EventoVIP0">
+  <void id="ArrayList0" property="listaEmpleados">
+   <void id="Empleado0" index="0"/>
+  </void>
+  <void property="listaEventos">
+   <void method="add">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Evento">
+     <void property="capacidadMaxima">
+      <int>34</int>
+     </void>
+     <void property="descripcion">
+      <string>hkjjñkjlk</string>
+     </void>
+     <void property="empleadoEncargado">
+      <object idref="Empleado0"/>
+     </void>
+     <void property="id">
+      <string>22</string>
+     </void>
+     <void property="nombre">
+      <string>jksjdfkaljñikk</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaUsuarios">
+   <void method="add">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario" id="Usuario0">
+     <void property="contrasena">
+      <string>123</string>
+     </void>
+     <void property="correo">
+      <string>alfonso@gmail.com</string>
+     </void>
+     <void property="id">
+      <string>1234</string>
+     </void>
+     <void property="nombre">
+      <string>Alfonso ocampo</string>
+     </void>
+     <void property="reservasDelUsuario">
+      <object class="java.util.ArrayList" id="ArrayList1">
+       <void method="add">
+        <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Reserva">
+         <void property="estado">
+          <object class="java.lang.Enum" method="valueOf">
+           <class>co.edu.uniquindio.reservas.proyecto_reservas.model.Estado</class>
+           <string>APROBADA</string>
+          </object>
+         </void>
+         <void property="evento">
+          <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Evento" id="Evento0">
+           <void property="descripcion">
+            <string>concierto de Shakira</string>
+           </void>
+           <void property="nombre">
+            <string>Concierto</string>
+           </void>
+          </object>
+         </void>
+         <void property="id">
+          <string>1</string>
+         </void>
+         <void property="usuario">
+          <object idref="Usuario0"/>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Reserva">
+         <void property="estado">
+          <object class="java.lang.Enum" method="valueOf">
+           <class>co.edu.uniquindio.reservas.proyecto_reservas.model.Estado</class>
+           <string>RECHAZADA</string>
+          </object>
+         </void>
+         <void property="evento">
+          <object idref="Evento0"/>
+         </void>
+         <void property="id">
+          <string>1</string>
+         </void>
+         <void property="usuario">
+          <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario" id="Usuario1">
+           <void property="contrasena">
+            <string>123</string>
+           </void>
+           <void property="correo">
+            <string>liseth@gmail.com</string>
+           </void>
+           <void property="id">
+            <string>12345</string>
+           </void>
+           <void property="nombre">
+            <string>Liseth</string>
+           </void>
+           <void property="reservasDelUsuario">
+            <object idref="ArrayList1"/>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object idref="Usuario1"/>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario">
+     <void property="contrasena">
+      <string>123</string>
+     </void>
+     <void property="correo">
+      <string>sara@gmail.com</string>
+     </void>
+     <void property="id">
+      <string>12346</string>
+     </void>
+     <void property="nombre">
+      <string>sara</string>
+     </void>
+     <void property="reservasDelUsuario">
+      <object idref="ArrayList1"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario">
+     <void property="contrasena">
+      <string>123</string>
+     </void>
+     <void property="correo">
+      <string>paco@gmail.com</string>
+     </void>
+     <void property="id">
+      <string>134234</string>
+     </void>
+     <void property="nombre">
+      <string>paco</string>
+     </void>
+     <void property="reservasDelUsuario">
+      <object class="java.util.ArrayList"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario">
+     <void property="contrasena">
+      <string>112233</string>
+     </void>
+     <void property="correo">
+      <string>poablo@gmail</string>
+     </void>
+     <void property="id">
+      <string>1254</string>
+     </void>
+     <void property="nombre">
+      <string>pablo</string>
+     </void>
+     <void property="reservasDelUsuario">
+      <object class="java.util.ArrayList"/>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

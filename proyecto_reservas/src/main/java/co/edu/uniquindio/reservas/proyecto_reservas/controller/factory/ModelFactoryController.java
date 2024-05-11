@@ -1,13 +1,14 @@
-package co.edu.uniquindio.reservas.proyecto_reservas.controller;
+package co.edu.uniquindio.reservas.proyecto_reservas.controller.factory;
 
+import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.EventoExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.UsuarioExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.HelloApplication;
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.services.IModelFactoryService;
+import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.EventoDto;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
+import co.edu.uniquindio.reservas.proyecto_reservas.mapping.mappers.MapperEvento;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.mappers.MapperUsuario;
-import co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP;
-import co.edu.uniquindio.reservas.proyecto_reservas.model.Persona;
-import co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.*;
 import co.edu.uniquindio.reservas.proyecto_reservas.utils.EventoVIPutils;
 import co.edu.uniquindio.reservas.proyecto_reservas.utils.Persistencia;
 import javafx.fxml.FXMLLoader;
@@ -19,17 +20,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static co.edu.uniquindio.reservas.proyecto_reservas.utils.Persistencia.cargarRecursoReservaVIPXML;
-
 
 public class ModelFactoryController implements IModelFactoryService {
 
     EventoVIP eventoVIP;
     MapperUsuario mapperUsuario;
+    MapperEvento mapperEvento;
 
     public ModelFactoryController() {
 
         mapperUsuario = new MapperUsuario();
+        mapperEvento = new MapperEvento();
         //1. inicializar datos y luego guardarlo en archivos
         System.out.println("invocación clase singleton");
         //inicializarDatos();
@@ -44,7 +45,10 @@ public class ModelFactoryController implements IModelFactoryService {
 
         //4. Guardar y Cargar el recurso serializable XML
        //guardarResourceXML();
-        cargarResourceXML();
+        //cargarResourceXML();
+        cargarResourceBinario();
+
+        agregarEmpleados();
 
         //Siempre se debe verificar si la raiz del recurso es null
 
@@ -140,8 +144,18 @@ public class ModelFactoryController implements IModelFactoryService {
                 Persona persona = eventoVIP.validarPersona(email, password, tipoUsuario);
 
                 if (persona != null) {
-                    navegarVentana("empresaReservas.fxml");
-                    registrarAccionesSistema("Inicio de sesión por "+tipoUsuario+ " con correo "+email, 1, "validarPersona, clase: ModelFactoryController");
+
+                    if(persona instanceof Empleado) {
+
+                        navegarVentana("empresaReservas.fxml");
+                        registrarAccionesSistema("Inicio de sesión por " + tipoUsuario + " con correo " + email, 1, "validarPersona, clase: ModelFactoryController");
+
+                    }else{
+
+                        navegarVentana("empresaReservas.fxml");
+                        registrarAccionesSistema("Inicio de sesión por " + tipoUsuario + " con correo " + email, 1, "validarPersona, clase: ModelFactoryController");
+
+                    }
 
                 } else {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -158,6 +172,76 @@ public class ModelFactoryController implements IModelFactoryService {
             registrarAccionesSistema(e.getMessage(), 2, "validarPersona, clase: ModelFactoryController");
         }
         return null;
+    }
+// TODO LO RELACIONADO CON CRUD DE EVENTOS
+    @Override
+    public boolean actualizarEvento(String id, EventoDto eventoDto) {
+        try{
+            Evento evento =mapperEvento.eventoDtoToevento(eventoDto);
+            getEventoVIP().actualizarEvento(id,evento);
+            salvarDatosPrueba();
+            guardarResourceXML();
+            guardarResourceBinario();
+            registrarAccionesSistema("Actualizacion con exito del evento "+evento.getNombre()+" con id: "+id+" ", 1, "actualizarEvento, Clase: ModelFactoryController ");
+            return true;
+        }catch (EventoExceptions e){
+            registrarAccionesSistema(e.getMessage(), 2, "actualizarEvento, Clase: ModelFactoryController ");
+            return false;
+        }
+
+    }
+
+    @Override
+    public boolean crearEvento(EventoDto eventoDto) {
+        try {
+            if(!eventoVIP.verificarEventoExistente(eventoDto.id())) {
+                Evento evento = mapperEvento.eventoDtoToevento(eventoDto);
+                getEventoVIP().crearEvento(evento);
+                //salvarDatosPrueba();
+                guardarResourceXML();
+                guardarResourceBinario();
+                registrarAccionesSistema("Creacion con exito del Evento "+evento.getNombre()+" con id "+evento.getId()+" ", 1, "crearEvento, Clase: ModelFactoriController");
+            }
+            return true;
+
+        }catch (EventoExceptions exceptions){
+            registrarAccionesSistema(exceptions.getMessage(), 2, "crearEvento ,clase:ModelFactoryController");
+            return false;
+        }
+    }
+
+    @Override
+    public boolean eliminarEvento(String id) {
+        boolean flagExiste = false;
+        try {
+            flagExiste = getEventoVIP().eliminarEvento(id);
+            salvarDatosPrueba();
+            guardarResourceXML();
+            guardarResourceBinario();
+            registrarAccionesSistema("Eliminacion con exito del evento con id:"+id+" ", 1, "eliminarEvento, Clase: ModelFactoryController");
+        } catch (EventoExceptions e) {
+            // TODO Auto-generated catch block
+            registrarAccionesSistema(e.getMessage(), 2, "Eliminar Evento, Clase: ModelFactoryController");
+        }
+        return flagExiste;
+    }
+
+    @Override
+    public boolean consultarEvento(String id) {
+        boolean existe = false;
+        try {
+            existe = getEventoVIP().consultarEvento(id);
+            registrarAccionesSistema("El evento con el id: "+id+" ", 1, "consultarEvento, Clase: ModelFactoryController");
+        } catch (EventoExceptions e) {
+            // TODO Auto-generated catch block
+            registrarAccionesSistema(e.getMessage(), 2, "consultarEvento, Clase: ModelFactoryController");
+        }
+        return existe;
+    }
+
+    @Override
+    public Persona obtenerSesion() {
+        return Sesion.getIntancia().getPersona();
     }
 
     private static class SingletonHolder {
@@ -262,5 +346,59 @@ public class ModelFactoryController implements IModelFactoryService {
     private void crearCopiaSeguridadLOG(){
         Persistencia.crearCopiaSeguridad(4);
     }
+    public List<EventoDto> obtenerEvento() {
+        return mapperEvento.ListaeventoToeventoDto(eventoVIP.getListaEventos());
+    }
+
+    public ArrayList<Empleado> obtenerEmpleadoStr(){
+
+        ArrayList<Empleado> empleados=new ArrayList<>();
+        for(Empleado emp:eventoVIP.getListaEmpleados() ){
+            empleados.add(emp);
+        }
+        return empleados;
+    }
+    public Empleado obtenerUNempleado(String nombre){
+        Empleado empleado = null;
+        for(Empleado emp:eventoVIP.getListaEmpleados() ){
+            if (emp.getNombre().equals(nombre)){
+                empleado=emp;
+                break;
+            }
+        }
+        return empleado;
+    }
+
+    public void agregarEmpleados(){
+
+        Empleado empleado1 = new Empleado("23","alfonso","asd@23","abc","mesero");
+        Empleado empleado2 = new Empleado("34","juan","aaaa@23","abc","vendedor");
+
+        if(!existeEmpleado("23")){
+            eventoVIP.getListaEmpleados().add(empleado1);
+        }
+
+        if(!existeEmpleado("34")){
+            eventoVIP.getListaEmpleados().add(empleado2);
+        }
+    }
+
+    public boolean existeEmpleado(String id){
+
+        boolean existe = false;
+
+        for( Empleado e : getEventoVIP().getListaEmpleados() ){
+            if(e.getId().equals(id)){
+                existe = true;
+            }
+        }
+
+        return existe;
+    }
+    public EventoDto obtenerUnEvento(String id){
+        return mapperEvento.eventoToEventoDto(eventoVIP.obtenerUnEvento(id));
+    }
+
+
 
 }

@@ -1,5 +1,6 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.controller;
 
+import co.edu.uniquindio.reservas.proyecto_reservas.controller.factory.ModelFactoryController;
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.services.IUsuarioService;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
 
@@ -12,6 +13,7 @@ public class UsuarioController  implements IUsuarioService {
     }
 
     public List<UsuarioDto> obtenerUsuario(){
+
         return  modelFactoryController.obtenerUsuario();
     }
 
@@ -27,6 +29,7 @@ public class UsuarioController  implements IUsuarioService {
 
     @Override
     public boolean crearUsuario(UsuarioDto usuarioDto) {
+
         return modelFactoryController.crearUsuario(usuarioDto);
     }
 

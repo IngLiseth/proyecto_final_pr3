@@ -10,7 +10,7 @@ public interface EventoVIPMapper {
 
     Usuario usuarioDtoTousario (UsuarioDto usuarioDto);
 
-    List<UsuarioDto> ListausuarioToUsuarioDto(List<Usuario>listaUsuarios);
+    List<UsuarioDto> ListausuarioToUsuarioDto(List<Usuario>listaUsuarios);  
 
     List<Usuario> ListausuarioDtoTousario(List<UsuarioDto>listaUsuariosDTO);
 

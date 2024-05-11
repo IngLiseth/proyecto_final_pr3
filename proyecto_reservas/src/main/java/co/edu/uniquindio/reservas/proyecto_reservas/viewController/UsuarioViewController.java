@@ -3,6 +3,8 @@ package co.edu.uniquindio.reservas.proyecto_reservas.viewController;
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.UsuarioController;
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.factory.ModelFactoryController;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.Persona;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -58,18 +60,28 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     @FXML
     private TextField txtNombreUsuario;
 
+    private Persona sesion;
+
     @FXML
     void initialize (){
+        modelFactoryController = ModelFactoryController.getInstance();
+        sesion = modelFactoryController.obtenerSesion();
         usuarioController= new UsuarioController();
         intiView();
     }
     private void intiView(){
 
-        initDataBinding();
-        obtenerUsuario();
-        tblUsuario.getItems().clear();
-        tblUsuario.setItems(listaUsuariosDto);
-        listenerSelection();
+        if( sesion instanceof Usuario){
+            tblUsuario.setVisible(false);
+        }else{
+
+            initDataBinding();
+            obtenerUsuario();
+            tblUsuario.getItems().clear();
+            tblUsuario.setItems(listaUsuariosDto);
+            listenerSelection();
+        }
+
     }
     @FXML
     public void crearUsuario (ActionEvent event ){agregarUsuario();}
@@ -187,7 +199,7 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
             mensaje += "La cédula es invalida \n" ;
         if(usuarioDto.nombre() == null || usuarioDto.nombre() .equals(""))
             mensaje += "El nombre es invalido \n" ;
-        if(usuarioDto.correo() == null || usuarioDto.correo().equals(""))
+        if(usuarioDto == null || usuarioDto.correo().equals(""))
             mensaje += "El correo electrónico es invalido \n" ;
         if(usuarioDto.contrasena() == null || usuarioDto.contrasena().equals(""))
             mensaje += "La contraseña es invalida \n" ;
