@@ -8,7 +8,7 @@ public record EventoDto(
         String id,
         String nombre,
         String descripcion,
-        LocalDate fecha,
+        String fecha,
         int capacidadMaxima,
         Empleado empleadoEncargado
 

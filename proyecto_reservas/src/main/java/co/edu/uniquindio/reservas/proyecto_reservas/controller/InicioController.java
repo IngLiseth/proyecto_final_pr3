@@ -12,6 +12,11 @@ public class InicioController implements ILoginService {
         modelFactoryController= ModelFactoryController.getInstance();
     }
 
+    public void navegarVentanas(String ventana)throws Exception{
+        modelFactoryController.navegarVentana(ventana);
+
+    }
+
 
     @Override
     public Persona validarPersona(String email, String password, String tipoUsuario) {

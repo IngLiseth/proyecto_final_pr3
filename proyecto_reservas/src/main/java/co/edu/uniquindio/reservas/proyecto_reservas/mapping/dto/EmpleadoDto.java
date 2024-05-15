@@ -6,9 +6,10 @@ import java.util.List;
 
 public record EmpleadoDto(
 
-        int id,
+        String id,
         String nombre,
         String correo,
+        String contraseña,
         String roles
 ) {
 

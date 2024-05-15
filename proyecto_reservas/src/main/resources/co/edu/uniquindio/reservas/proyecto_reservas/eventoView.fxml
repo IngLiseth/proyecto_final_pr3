@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="465.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.reservas.proyecto_reservas.viewController.EventoViewController">
    <children>
-      <GridPane layoutY="40.0" prefHeight="150.0" prefWidth="589.0">
+      <GridPane fx:id="gridPaneEvento" layoutY="40.0" prefHeight="150.0" prefWidth="589.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -38,7 +38,7 @@
             <Label prefHeight="17.0" prefWidth="146.0" text="                            Fecha:" GridPane.columnIndex="2" />
             <TextField fx:id="txtCapacidadMaximaEvento" prefHeight="0.0" prefWidth="330.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <Label prefHeight="17.0" prefWidth="146.0" text="          Capacidad Máxima:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label prefHeight="17.0" prefWidth="146.0" text="        Empleado Encargado:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="lblEmpleadoEncargado" prefHeight="17.0" prefWidth="146.0" text="        Empleado Encargado:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <ComboBox fx:id="boxEmpleadoEncargadoEvento" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <Label prefHeight="17.0" prefWidth="138.0" GridPane.rowIndex="3" />
          </children>
@@ -54,9 +54,10 @@
             <TableColumn fx:id="colReservasdeEventos" prefWidth="36.0" />
         </columns>
       </TableView>
-      <Button fx:id="registrarEvento" layoutX="121.0" layoutY="185.0" mnemonicParsing="false" onAction="#registrarEvento" text="Registrar" />
+      <Button fx:id="registrarEvento" layoutX="121.0" layoutY="185.0" mnemonicParsing="false" onAction="#registrarEvento" text="Crear" />
       <Button fx:id="consultarEvento" layoutX="347.0" layoutY="185.0" mnemonicParsing="false" onAction="#consultarEvento" text="Consultar" />
       <Button fx:id="eliminarEvento" layoutX="466.0" layoutY="182.0" mnemonicParsing="false" onAction="#eliminarEvento" text="Eliminar" />
       <Button fx:id="actualizarEvento" layoutX="222.0" layoutY="185.0" mnemonicParsing="false" onAction="#actualizarEvento" text="Actualizar" />
+      <Label fx:id="labelEventosDisponibles" layoutX="246.0" layoutY="224.0" text="Eventos disponoblersbels" />
    </children>
 </AnchorPane>

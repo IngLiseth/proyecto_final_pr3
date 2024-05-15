@@ -43,4 +43,13 @@ public class UsuarioController  implements IUsuarioService {
         return modelFactoryController.consultarUsuario(id);
     }
 
+    public void navegarVentanas(String ventana)throws Exception{
+        modelFactoryController.navegarVentana(ventana);
+
+    }
+    public void registrarAccionesSistema(String mensaje, int nivel, String accion){
+        modelFactoryController.registrarAccionesSistema(mensaje,nivel,accion);
+
+    }
+
 }

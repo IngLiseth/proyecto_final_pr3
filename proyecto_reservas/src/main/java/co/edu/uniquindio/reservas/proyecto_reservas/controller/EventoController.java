@@ -6,6 +6,8 @@ import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.EventoDto;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EventoController implements IEventosService {
@@ -16,6 +18,25 @@ public class EventoController implements IEventosService {
     }
     public List<EventoDto> obtenerEvento(){
         return  modelFactoryController.obtenerEvento();
+    }
+
+    public List<EventoDto> obtenerEventoPorCapasidad(int capasidad){
+        List<EventoDto> eventosPorCapasidad= new ArrayList<>();
+        eventosPorCapasidad.addAll(modelFactoryController.obtenerEventoPorCapasidad(capasidad));
+        return eventosPorCapasidad;
+    }
+    public List<EventoDto> obtenerEventoPorFecha(String fecha){
+        List<EventoDto> eventosPorCapasidad= new ArrayList<>();
+        eventosPorCapasidad.addAll(modelFactoryController.obtenerEventoPorFecha(fecha));
+        return eventosPorCapasidad;
+    }
+    public List<EventoDto> obtenerEventoPorEmpleado(String empleado){
+        List<EventoDto> eventosPorCapasidad= new ArrayList<>();
+        eventosPorCapasidad.addAll(modelFactoryController.obtenerEventoPorEmpleado(empleado));
+        return eventosPorCapasidad;
+    }
+    public List<EventoDto> obtenerEventosDisponibles(){
+        return  modelFactoryController.obtenerEventoDisponoble();
     }
 
     @Override
@@ -41,6 +62,11 @@ public class EventoController implements IEventosService {
     }
     public EventoDto obtenerUnEvento(String id){
         return modelFactoryController.obtenerUnEvento(id);
+    }
+
+    public void registrarAccionesSistema(String mensaje, int nivel, String accion){
+        modelFactoryController.registrarAccionesSistema(mensaje,nivel,accion);
+
     }
 
 

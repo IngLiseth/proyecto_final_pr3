@@ -3,6 +3,8 @@ package co.edu.uniquindio.reservas.proyecto_reservas.viewController;
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.UsuarioController;
 import co.edu.uniquindio.reservas.proyecto_reservas.controller.factory.ModelFactoryController;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.Administrador;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.Persona;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario;
 import javafx.beans.property.SimpleStringProperty;
@@ -34,7 +36,10 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     private Button btnRegistrarUsuario;
 
     @FXML
-    private TableView<UsuarioDto> tblUsuario=new TableView<>();
+    private Button btnAtrasUsuario;
+
+    @FXML
+    private TableView<UsuarioDto> tblUsuario =new TableView<>();
 
     @FXML
     private TableColumn<UsuarioDto, String> tcCedulaUsuario = new TableColumn<>("Cédula");
@@ -70,19 +75,29 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
         intiView();
     }
     private void intiView(){
-
         if( sesion instanceof Usuario){
-            tblUsuario.setVisible(false);
-        }else{
-
-            initDataBinding();
+            listaUsuariosDto.add(usuarioController.obtenerUnUsuario(sesion.getId()));
+            btnConsultarUsuario.setVisible(false);
+            btnRegistrarUsuario.setVisible(false);
+            btnAtrasUsuario.setVisible(false);
+        }else if(sesion instanceof Empleado){
             obtenerUsuario();
-            tblUsuario.getItems().clear();
-            tblUsuario.setItems(listaUsuariosDto);
-            listenerSelection();
-        }
 
+        } else if (sesion instanceof Administrador) {
+            obtenerUsuario();
+            btnAtrasUsuario.setVisible(false);
+            btnRegistrarUsuario.setVisible(false);
+            btnActualizarUsuario.setVisible(false);
+        }else{
+           // tblUsuario.setVisible(false);
+            btnConsultarUsuario.setVisible(false);
+        }
+        initDataBinding();
+        tblUsuario.getItems().clear();
+        tblUsuario.setItems(listaUsuariosDto);
+        listenerSelection();
     }
+
     @FXML
     public void crearUsuario (ActionEvent event ){agregarUsuario();}
     @FXML
@@ -96,6 +111,11 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     @FXML
     public void consultarUsuarioAction(ActionEvent event){
         consultarUsuario();
+    }
+
+
+    public void atrasUsuarioAction(ActionEvent event) throws Exception{
+        usuarioController.navegarVentanas("inicio.fxml");
     }
 
     private void consultarUsuario(){
@@ -127,7 +147,7 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
         boolean usuarioEliminado = false;
         if(usuarioSeleccionado != null){
             if(mostrarMensajeConfirmacion("¿Estas seguro de elmininar al usuario?")){
-                ModelFactoryController.registrarAccionesSistema("Se confirmo la eliminacion del usuario con id:"+usuarioSeleccionado.id()+" y de nombre:  "+ usuarioSeleccionado.nombre(),
+                usuarioController.registrarAccionesSistema("Se confirmo la eliminacion del usuario con id:"+usuarioSeleccionado.id()+" y de nombre:  "+ usuarioSeleccionado.nombre(),
                         1,"eliminarUsuario, clase:UsuarioVewController");
                 usuarioEliminado = usuarioController.eliminarUsuario(usuarioSeleccionado.id());
                 if(usuarioEliminado == true){
@@ -164,32 +184,37 @@ ObservableList<UsuarioDto> listaUsuariosDto = FXCollections.observableArrayList(
     }
 
     public void actualizarUsuario( ){
-        boolean UsuarioActualizado = false;
-        //1. Capturar los datos
-       // String idActual = usuarioSeleccionado.id(); // actualiza todo
-        UsuarioDto usuarioDto = construirUsuarioDTO();
-        String idActual = usuarioDto.id(); // actualiza todo menos la cedula
-        //2. verificar el empleado seleccionado
-        if(usuarioSeleccionado != null){
-            //3. Validar la información
-            if(datosValidos(usuarioSeleccionado)){
-                UsuarioActualizado = usuarioController.actualizarUsuario( idActual,usuarioDto);
-                if(UsuarioActualizado){
-                    listaUsuariosDto.remove(usuarioSeleccionado);
-                    listaUsuariosDto.add(usuarioDto);
-                    tblUsuario.refresh();
-                    mostrarMensaje("Notificación usuario", "usuario actualizado", "El usuario se ha actualizado con éxito", Alert.AlertType.INFORMATION);
-                    limpiarCamposUsuario();
-                }else{
-                    mostrarMensaje("Notificación usuario", "usuario no actualizado", "El usuario no se ha actualizado ", Alert.AlertType.INFORMATION);
+        if(mostrarMensajeConfirmacion("¿Estas seguro de Actualizar al usuario?")) {
+            usuarioController.registrarAccionesSistema("Se confirmo la actualizacion del usuario con id:" + usuarioSeleccionado.id() + " y de nombre:  " + usuarioSeleccionado.nombre(),
+                    1, "actualizarUsuario, clase:UsuarioVewController");
+            boolean UsuarioActualizado = false;
+            //1. Capturar los datos
+            // String idActual = usuarioSeleccionado.id(); // actualiza todo
+            UsuarioDto usuarioDto = construirUsuarioDTO();
+            String idActual = usuarioDto.id(); // actualiza todo menos la cedula
+            //2. verificar el empleado seleccionado
+            if (usuarioSeleccionado != null) {
+                //3. Validar la información
+                if (datosValidos(usuarioSeleccionado)) {
+
+                    UsuarioActualizado = usuarioController.actualizarUsuario(idActual, usuarioDto);
+                    if (UsuarioActualizado) {
+                        listaUsuariosDto.remove(usuarioSeleccionado);
+                        listaUsuariosDto.add(usuarioDto);
+                        tblUsuario.refresh();
+                        mostrarMensaje("Notificación usuario", "usuario actualizado", "El usuario se ha actualizado con éxito", Alert.AlertType.INFORMATION);
+                        limpiarCamposUsuario();
+                    } else {
+                        mostrarMensaje("Notificación usuario", "usuario no actualizado", "El usuario no se ha actualizado ", Alert.AlertType.INFORMATION);
+                    }
+
+                } else {
+                    mostrarMensaje("Notificación usuario", "usuario no creado", "Los datos ingresados son invalidos", Alert.AlertType.ERROR);
                 }
-            }else{
-                mostrarMensaje("Notificación usuario", "usuario no creado", "Los datos ingresados son invalidos", Alert.AlertType.ERROR);
+
+            } else {
+                mostrarMensaje("Notificación usuario", "usuario no seleccionado", "Seleccionado un usuario de la lista", Alert.AlertType.WARNING);
             }
-
-        }else{
-            mostrarMensaje("Notificación usuario", "usuario no seleccionado", "Seleccionado un usuario de la lista", Alert.AlertType.WARNING);
-
         }
 
     }

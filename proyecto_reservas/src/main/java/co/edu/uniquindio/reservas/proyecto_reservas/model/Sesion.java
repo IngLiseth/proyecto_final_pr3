@@ -1,9 +1,21 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
-public class Sesion {
+import java.io.Serializable;
+
+public class Sesion implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private Persona persona;
     private static Sesion INTANCIA;
+
+    public static Sesion getINTANCIA() {
+        return INTANCIA;
+    }
+
+    public static void setINTANCIA(Sesion INTANCIA) {
+        Sesion.INTANCIA = INTANCIA;
+    }
 
     private Sesion(){
 

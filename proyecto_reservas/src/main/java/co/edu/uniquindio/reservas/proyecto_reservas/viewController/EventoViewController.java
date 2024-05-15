@@ -5,9 +5,7 @@ import co.edu.uniquindio.reservas.proyecto_reservas.controller.factory.ModelFact
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.EmpleadoDto;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.EventoDto;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.UsuarioDto;
-import co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado;
-import co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP;
-import co.edu.uniquindio.reservas.proyecto_reservas.model.Reserva;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.*;
 import co.edu.uniquindio.reservas.proyecto_reservas.utils.EventoVIPutils;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -16,9 +14,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
 import org.controlsfx.control.CheckComboBox;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -37,22 +37,22 @@ public class EventoViewController {
     private ComboBox<Empleado> boxEmpleadoEncargadoEvento;
 
     @FXML
-    private TableColumn<EventoDto, String> colCapacidadMax;
+    private TableColumn<EventoDto, String> colCapacidadMax = new TableColumn<>("Capasidad");;
 
     @FXML
-    private TableColumn<EventoDto, String> colDescripcion;
+    private TableColumn<EventoDto, String> colDescripcion = new TableColumn<>("Descripcion");;
 
     @FXML
-    private TableColumn<EventoDto, String> colEmpleadoEncargado;
+    private TableColumn<EventoDto, String> colEmpleadoEncargado = new TableColumn<>("Empleado");;
 
     @FXML
-    private TableColumn<EventoDto, String> colFecha;
+    private TableColumn<EventoDto, String> colFecha = new TableColumn<>("Fecha");;
 
     @FXML
-    private TableColumn<EventoDto, String> colId;
+    private TableColumn<EventoDto, String> colId = new TableColumn<>("Id");;
 
     @FXML
-    private TableColumn<EventoDto, String> colNombre;
+    private TableColumn<EventoDto, String> colNombre = new TableColumn<>("Nombre");;
 
     @FXML
     private Button consultarEvento;
@@ -67,10 +67,10 @@ public class EventoViewController {
     private Button registrarEvento;
 
     @FXML
-    private TableView<EventoDto> tblEventos;
+    private TableView<EventoDto> tblEventos = new TableView<>();
 
     @FXML
-    private TextField txtCapacidadMaximaEvento;
+    private TextField txtCapacidadMaximaEvento ;
 
     @FXML
     private TextField txtDescripcionEvento;
@@ -82,12 +82,20 @@ public class EventoViewController {
     private TextField txtNombreEvento;
 
     @FXML
+    private GridPane gridPaneEvento;
+    @FXML
+    private Label labelEventosDisponibles;
+    @FXML
+    private Label lblEmpleadoEncargado;
+
+    @FXML
     void actualizarEvento(ActionEvent event) { actualizarEvento();
 
     }
 
     @FXML
-    void consultarEvento(ActionEvent event) {consultarEvento();
+    void consultarEvento(ActionEvent event) {
+        consultarEvento();
     }
 
     @FXML
@@ -95,22 +103,51 @@ public class EventoViewController {
 
     @FXML
     void registrarEvento(ActionEvent event) {agregarEvento();}
+
+    private Persona sesion;
     @FXML
     void initialize() {
+        modelFactoryController = ModelFactoryController.getInstance();
+        sesion = modelFactoryController.obtenerSesion();
         eventoController = new EventoController();
         intiView();
     }
 
     private void intiView() {
 
+        if( sesion instanceof Usuario){
+            gridPaneEvento.setVisible(false);
+            consultarEvento.setVisible(false);
+            eliminarEvento.setVisible(false);
+            registrarEvento.setVisible(false);
+            actualizarEvento.setVisible(false);
+            obtenerEventoDisponible();
+
+        }else if( sesion instanceof Empleado){
+            obtenerEvento();
+            listaEmpleado = FXCollections.observableArrayList( modelFactoryController.obtenerEmpleadoStr() );
+            boxEmpleadoEncargadoEvento.setItems(listaEmpleado);
+
+        }else{
+            labelEventosDisponibles.setVisible(false);
+            obtenerEvento();
+            System.out.println(modelFactoryController.obtenerEmpleadoStr()  );
+            listaEmpleado = FXCollections.observableArrayList( modelFactoryController.obtenerEmpleadoStr() );
+            boxEmpleadoEncargadoEvento.setItems(listaEmpleado);
+        }
         initDataBinding();
-        obtenerEvento();
         tblEventos.getItems().clear();
         tblEventos.setItems(listaEventosDto);
-        System.out.println(modelFactoryController.obtenerEmpleadoStr()  );
-        listaEmpleado = FXCollections.observableArrayList( modelFactoryController.obtenerEmpleadoStr() );
-        boxEmpleadoEncargadoEvento.setItems(listaEmpleado);
         listenerSelection();
+
+//        initDataBinding();
+//        obtenerEvento();
+//        tblEventos.getItems().clear();
+//        tblEventos.setItems(listaEventosDto);
+//        System.out.println(modelFactoryController.obtenerEmpleadoStr()  );
+//        listaEmpleado = FXCollections.observableArrayList( modelFactoryController.obtenerEmpleadoStr() );
+//        boxEmpleadoEncargadoEvento.setItems(listaEmpleado);
+//        listenerSelection();
     }
 
     private void agregarEvento() {
@@ -130,11 +167,18 @@ public class EventoViewController {
     }
 
     private EventoDto construirEventoDTO() {
+        // Obtener el valor de la fecha del DatePicker
+        LocalDate fechaEvento = ldateFechaEvento.getValue();
+        // Crear un formateador de fecha
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        // Convertir la fecha a String utilizando el formateador
+        String fechaEventoStr = fechaEvento.format(formatter);
+
         EventoDto eventoDto = new EventoDto(
                 txtIdEvento.getText(),
                 txtNombreEvento.getText(),
                 txtDescripcionEvento.getText(),
-                ldateFechaEvento.getValue(),
+                fechaEventoStr,
                 Integer.parseInt(txtCapacidadMaximaEvento.getText()),
                 boxEmpleadoEncargadoEvento.getValue()
 
@@ -186,6 +230,9 @@ public class EventoViewController {
     private void  obtenerEvento(){
         listaEventosDto.addAll(eventoController.obtenerEvento());
     }
+    private void  obtenerEventoDisponible(){
+        listaEventosDto.addAll(eventoController.obtenerEventosDisponibles());
+    }
     private void listenerSelection() {
         tblEventos.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             eventoSeleccionado = newSelection;
@@ -193,11 +240,14 @@ public class EventoViewController {
         });
     }
     private void mostrarInformacionEvento(EventoDto eventoSeleccionado) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fechaEvento = LocalDate.parse(eventoSeleccionado.fecha(), formatter);
+
         if(eventoSeleccionado != null){
             txtIdEvento.setText(eventoSeleccionado.id());
             txtNombreEvento.setText(eventoSeleccionado.nombre());
             txtDescripcionEvento.setText(eventoSeleccionado.descripcion());
-            ldateFechaEvento.setValue(eventoSeleccionado.fecha());
+            ldateFechaEvento.setValue(fechaEvento);
             txtCapacidadMaximaEvento.setText(""+eventoSeleccionado.capacidadMaxima());
             boxEmpleadoEncargadoEvento.setValue(eventoSeleccionado.empleadoEncargado());
         }
@@ -206,17 +256,21 @@ public class EventoViewController {
         boolean eventoEliminado = false;
         if(eventoSeleccionado != null){
             if(mostrarMensajeConfirmacion("esta seguro de eliminar el evento")){
-                ModelFactoryController.registrarAccionesSistema("Se confirmo la eliminacion del evento:"+eventoSeleccionado.id()+" con nombre:"+ eventoSeleccionado.nombre(),
-                        1,"eliminarEvento, clase:EventoViewController");
-                eventoEliminado = eventoController.eliminarEvento(eventoSeleccionado.id());
-                if(eventoEliminado == true){
-                    listaEventosDto.remove(eventoSeleccionado);
-                    eventoSeleccionado = null;
-                    tblEventos.getSelectionModel().clearSelection();
-                    limpiarCamposEvento();
-                    mostrarMensaje("Notificación Evento", "Evento eliminado", "El evento se ha eliminado con éxito", Alert.AlertType.INFORMATION);
-                }else{
-                    mostrarMensaje("Notificación Evento", "Evento no ha sido eliminado", "El evento no se puede eliminar", Alert.AlertType.ERROR);
+                if(mostrarMensajeConfirmacion("CUIDADO: Si elimina el evento tambien sus reservas" +
+                        " se recomienda eliminar solo si el evento termino o fue cancelado")){
+                    eventoController.registrarAccionesSistema("Se confirmo la eliminacion del evento:"+eventoSeleccionado.id()+" con nombre:"+ eventoSeleccionado.nombre(),
+                            1,"eliminarEvento, clase:EventoViewController");
+                    eventoEliminado = eventoController.eliminarEvento(eventoSeleccionado.id());
+                    if(eventoEliminado == true){
+                        listaEventosDto.remove(eventoSeleccionado);
+                        eventoSeleccionado = null;
+                        tblEventos.getSelectionModel().clearSelection();
+                        limpiarCamposEvento();
+                        mostrarMensaje("Notificación Evento", "Evento eliminado", "El evento se ha eliminado con éxito", Alert.AlertType.INFORMATION);
+                    }else{
+                        mostrarMensaje("Notificación Evento", "Evento no ha sido eliminado", "El evento no se puede eliminar", Alert.AlertType.ERROR);
+                    }
+
                 }
             }
         }else{
@@ -245,11 +299,87 @@ public class EventoViewController {
 
     }
     private void consultarEvento() {
+        boolean validar=false;
+        try {
+            if( !(boxEmpleadoEncargadoEvento.getValue().equals("")))
+                consultarPorEmpleado();
+        }catch (NullPointerException e){
+            validar= true;
+        }
+        if(txtCapacidadMaximaEvento.getText().equals("") && ldateFechaEvento.getValue()==null
+                && txtIdEvento.getText().equals("")&& validar==true){
+            tblEventos.getItems().clear();
+            obtenerEvento();
+            tblEventos.setItems(listaEventosDto);
+        }
+
+        if( !(txtCapacidadMaximaEvento.getText().equals(""))){
+            consultarPorCapasidad();
+        }else if(ldateFechaEvento.getValue()!=null){
+            consultarPorFecha();
+        } else if( !(txtIdEvento.getText().equals(""))){
+            consultarConID();
+        }
+
+
+
+
+
+    }
+
+    private void consultarPorEmpleado(){
+        System.out.println(modelFactoryController.obtenerEmpleadoStr()  );
+        tblEventos.getItems().clear();
+        listaEventosDto.addAll(eventoController.obtenerEventoPorEmpleado(String.valueOf(boxEmpleadoEncargadoEvento.getValue())));
+        if (listaEventosDto == null || listaEventosDto.isEmpty()) {
+            limpiarCamposEvento();
+            mostrarMensaje("Notificación Evento", "Eventos no encontrados", "No hay Eventos asignados a este empleado: "+boxEmpleadoEncargadoEvento.getValue(), Alert.AlertType.ERROR);
+        } else {
+            limpiarCamposEvento();
+            tblEventos.setItems(listaEventosDto);
+        }
+    }
+
+
+    private void consultarConID(){
         if (eventoController.consultarEvento(txtIdEvento.getText())) {
             EventoDto eventoDto = eventoController.obtenerUnEvento(txtIdEvento.getText());
-            mostrarInformacionEvento(eventoDto);
+            tblEventos.getItems().clear();
+            listaEventosDto.add(eventoDto);
+            tblEventos.setItems(listaEventosDto);
+            limpiarCamposEvento();
         } else {
+            limpiarCamposEvento();
             mostrarMensaje("Notificación Evento", "Evento no encontrado", "El Evento no éxiste", Alert.AlertType.ERROR);
+        }
+
+    }
+    private void consultarPorFecha(){
+        // Obtener el valor de la fecha del DatePicker
+        LocalDate fechaEvento = ldateFechaEvento.getValue();
+        // Crear un formateador de fecha
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        // Convertir la fecha a String utilizando el formateador
+        String fechaEventoStr = fechaEvento.format(formatter);
+        tblEventos.getItems().clear();
+        listaEventosDto.addAll(eventoController.obtenerEventoPorFecha(fechaEventoStr));
+        if (listaEventosDto == null || listaEventosDto.isEmpty()) {
+            limpiarCamposEvento();
+            mostrarMensaje("Notificación Evento", "Eventos no encontrados", "No hay Eventos con esta fecha", Alert.AlertType.ERROR);
+        } else {
+            limpiarCamposEvento();
+            tblEventos.setItems(listaEventosDto);
+        }
+    }
+    private void consultarPorCapasidad(){
+        tblEventos.getItems().clear();
+        listaEventosDto.addAll(eventoController.obtenerEventoPorCapasidad(Integer.parseInt(txtCapacidadMaximaEvento.getText())));
+        if (listaEventosDto == null || listaEventosDto.isEmpty()) {
+            limpiarCamposEvento();
+            mostrarMensaje("Notificación Evento", "Eventos no encontrados", "No hay Eventos con esa capasidad", Alert.AlertType.ERROR);
+        } else {
+            limpiarCamposEvento();
+            tblEventos.setItems(listaEventosDto);
         }
     }
     public void actualizarEvento( ){

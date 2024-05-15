@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -38,9 +39,27 @@ public class InicioViewController implements Initializable {
     }
 
     public void registrarPersona(ActionEvent actionEvent) throws Exception {
+        validacionMostrar();
+    }
 
-        ModelFactoryController modelFactoryController = new ModelFactoryController();
-        modelFactoryController.navegarVentana("usuarioView.fxml");
+    private void validacionMostrar() throws Exception{
+        if (listaTipos.getValue() == null || listaTipos.getValue().equals("")) {
+            mostrarMensaje("Notificación ","Seleccion de tipo","Deves de seleccionar el tipo que deseas registrar", Alert.AlertType.ERROR);
+        }else if(listaTipos.getValue().equals("Usuario")){
+            inicioController.navegarVentanas("usuarioView.fxml");
+        }else if(listaTipos.getValue().equals("Empleado")){
+            mostrarMensaje("Notificación ","Selecciono un empleado","A un empleado solo lo puede registrar un administrador", Alert.AlertType.ERROR);
+        }else if(listaTipos.getValue().equals("Admin")){
+            mostrarMensaje("Notificación ","Selecciono un Admin","A un admin solo lo puede registrar alguien de sistemas,  preguntar a Liseth", Alert.AlertType.ERROR);
+        }
+    }
+
+    private void mostrarMensaje(String titulo, String header, String contenido, Alert.AlertType alertType) {
+        Alert aler = new Alert(alertType);
+        aler.setTitle(titulo);
+        aler.setHeaderText(header);
+        aler.setContentText(contenido);
+        aler.showAndWait();
     }
 
     @Override

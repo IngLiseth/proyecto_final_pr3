@@ -10,17 +10,29 @@ public class Evento implements Serializable {
     private String id;
     private String nombre;
     private String descripcion;
-        private LocalDate fecha;
+    private String fecha;
     private int capacidadMaxima;
     private Empleado empleadoEncargado;
 
-    public Evento(String  id, String nombre, String descripcion, LocalDate fecha, int capacidadMaxima,Empleado empleadoEncargado) {
+    private boolean disponible;
+
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    public Evento(String  id, String nombre, String descripcion, String fecha, int capacidadMaxima, Empleado empleadoEncargado) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fecha = fecha;
         this.capacidadMaxima = capacidadMaxima;
         this.empleadoEncargado =empleadoEncargado;
+        this.disponible = true;
     }
     public Evento(){
 
@@ -33,8 +45,8 @@ public class Evento implements Serializable {
     public void setNombre(String nombre) {this.nombre = nombre;}
     public String getDescripcion() {return descripcion;}
     public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
-    public LocalDate getFecha() {return fecha;}
-    public void setFecha(LocalDate fecha) {this.fecha = fecha;}
+    public String getFecha() {return fecha;}
+    public void setFecha(String fecha) {this.fecha = fecha;}
     public int getCapacidadMaxima() {return capacidadMaxima;}
     public void setCapacidadMaxima(int capacidadMaxima) {this.capacidadMaxima = capacidadMaxima;}
 

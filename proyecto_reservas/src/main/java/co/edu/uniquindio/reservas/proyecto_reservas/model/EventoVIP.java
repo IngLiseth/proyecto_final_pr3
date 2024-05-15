@@ -1,14 +1,17 @@
 package co.edu.uniquindio.reservas.proyecto_reservas.model;
 
+import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.EmpleadoExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.EventoExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.Exceptions.UsuarioExceptions;
 import co.edu.uniquindio.reservas.proyecto_reservas.HelloApplication;
 import co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.EventoDto;
+import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IEventosEmpleadoServices;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IeventosServiceModel;
 import co.edu.uniquindio.reservas.proyecto_reservas.model.services.IeventosVIPService;
 import java.io.File;
 import java.io.Serializable;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.FileHandler;
@@ -16,7 +19,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class EventoVIP implements IeventosVIPService ,IeventosServiceModel, Serializable {
+public class EventoVIP implements IeventosVIPService ,IeventosServiceModel, Serializable, IEventosEmpleadoServices {
 
     private static final long serialVersionUID = 1L;
 
@@ -27,8 +30,16 @@ public class EventoVIP implements IeventosVIPService ,IeventosServiceModel, Seri
     List<Evento> listaEventos= new ArrayList<>();
     List<Reserva> listaReservas= new ArrayList<>();
 
+    List<Administrador> listaAdministradores = new ArrayList<>();
 
-//    public void EventoVIP(){
+    public List<Administrador> getListaAdministradores() {
+        return listaAdministradores;
+    }
+
+    public void setListaAdministradores(List<Administrador> listaAdministradores) {
+        this.listaAdministradores = listaAdministradores;
+    }
+    //    public void EventoVIP(){
 //        //UUID.randomUUID();
 //    }
 
@@ -54,6 +65,49 @@ public class EventoVIP implements IeventosVIPService ,IeventosServiceModel, Seri
     }
 
     public List<Evento> getListaEventos() {
+        return listaEventos;
+    }
+    public List<Evento> obtenerEventosPorCapasidad(int capasidad) {
+        List <Evento> eventosCapasidad = new ArrayList<>();
+        for(Evento evento:listaEventos ){
+            if(evento.getCapacidadMaxima()==capasidad){
+                eventosCapasidad.add(evento);
+            }
+        }
+        return eventosCapasidad;
+    }
+    public List<Evento> obtenerEventosPorFecha(String fecha) {
+        List <Evento> eventosCapacidad = new ArrayList<>();
+        for (Evento evento : listaEventos) {
+            if (evento.getFecha().equals(fecha)) {
+                eventosCapacidad.add(evento);
+            }
+        }
+        return eventosCapacidad;
+    }
+    public List<Evento> obtenerEventosPorEmpleado(String empleado) {
+        System.out.println(empleado);
+        List<Evento> eventosCapacidad = new ArrayList<>();
+        for (Evento evento : listaEventos) {
+            String nombreEmpleado = evento.getEmpleadoEncargado().getNombre();
+            // Dividir la cadena 'empleado' en partes usando el delimitador ":"
+            String[] partes = empleado.split(":");
+            // Comparar el segundo elemento (posición 1) con el nombre del empleado
+            if (partes.length == 2 && nombreEmpleado.contains(partes[1].trim())) {
+                eventosCapacidad.add(evento);
+            }
+        }
+        return eventosCapacidad;
+    }
+
+    public List<Evento> getListaEventosDsiponibles() {
+        List <Evento> eventoDisponible= new ArrayList<>();
+        for (Evento evento:listaEventos){
+            if(evento.isDisponible()){
+                eventoDisponible.add(evento);
+            }
+
+        }
         return listaEventos;
     }
 
@@ -161,7 +215,6 @@ public class EventoVIP implements IeventosVIPService ,IeventosServiceModel, Seri
     public Persona validarPersona(String email, String password, String tipoPersona) {
 
         Persona persona = null;
-
         if(tipoPersona.equals("Usuario")){
             persona = buscarUsuario(email, password);
         }else if(tipoPersona.equals("Empleado")){
@@ -169,24 +222,27 @@ public class EventoVIP implements IeventosVIPService ,IeventosServiceModel, Seri
         }else if(tipoPersona.equals("Admin")){
             persona = buscarAdmin(email, password);
         }
-
         //Sesión de usuario
         Sesion sesion = Sesion.getIntancia();
         sesion.setPersona(persona);
 
        // String cadenas = usuario.getNombre()+"@@"+usuario.getCorreo()+"@@".... con for para hacer el segundo punto
 
-        if(persona!=null){
-            escribirLog(Level.INFO, "La persona "+persona+ " con el rol "+tipoPersona+" ha ingresado al sistema");
-        }else{
-            escribirLog(Level.SEVERE, "Los datos de acceso "+email+" y "+password+" son incorrectos");
-        }
-
+//        if(persona!=null){
+//            escribirLog(Level.INFO, "La persona "+persona+ " con el rol "+tipoPersona+" ha ingresado al sistema");
+//        }else{
+//            escribirLog(Level.SEVERE, "Los datos de acceso "+email+" y "+password+" son incorrectos");
+//        }
         return persona;
     }
 
     private Persona buscarAdmin(String email, String password) {
-        return null;
+        for(Administrador a : listaAdministradores){
+            if( a.getCorreo().equals(email) && a.getContrasena().equals(password) ){
+                return a;
+            }
+        }
+        return  null;
     }
 
     private Persona buscarEmpleado(String email, String password) {
@@ -312,6 +368,85 @@ public class EventoVIP implements IeventosVIPService ,IeventosServiceModel, Seri
         }
         return eventoObtenido;
     }
+
+
+    // TODO LO relacionado con el CRUD de empleado
+
+    @Override
+    public boolean actualizarEmpleado(String id, Empleado empleado) throws EmpleadoExceptions {
+        Empleado empleadoActual= obtenerUnEmpleado(id);
+        if (empleadoActual== null){
+            throw new EmpleadoExceptions("El empleado: "+empleado.getNombre()+" con id: "+id+ "a actualizar no existe");
+
+        }else{
+            empleadoActual.setId(empleado.getId());
+            empleadoActual.setNombre(empleado.getNombre());
+            empleadoActual.setCorreo(empleado.getCorreo());
+            empleadoActual.setContrasena(empleado.getContrasena());
+            empleadoActual.setRoles(empleado.getRoles());
+            return true;
+        }
+    }
+
+    @Override
+    public void crearEmpleado(Empleado empleado) {
+        getListaEmpleados().add(empleado);
+
+    }
+
+    @Override
+    public boolean eliminarEmpleado(String id) throws EmpleadoExceptions {
+        Empleado empleado = null;
+        boolean flagExiste = false;
+        empleado = obtenerUnEmpleado(id);
+        if(empleado == null)
+            throw new EmpleadoExceptions("No existe el empleado a eliminar con cedula: "+id+" ");
+        else{
+            getListaEmpleados().remove(empleado);
+            flagExiste = true;
+        }
+        return flagExiste;
+    }
+
+    @Override
+    public boolean consultarEmpleado(String id) throws EmpleadoExceptions {
+        if (empleadoExiste(id)) {
+            return true;
+        }else {
+            throw new EmpleadoExceptions(" El empleado con cédula " + id + " NO  existe ");
+        }
+    }
+
+    public Empleado obtenerUnEmpleado(String id) {
+        Empleado empleadoEncontrado = null;
+        for (Empleado empleado : getListaEmpleados()) {
+            if(empleado.getId().equals(id)){
+                empleadoEncontrado = empleado;
+                break;
+            }
+        }
+        return empleadoEncontrado;
+
+    }
+    private boolean empleadoExiste(String id) {
+        boolean empleadoExiste = false;
+        for (Empleado empleado: getListaEmpleados()) {
+            if (empleado.getId().equalsIgnoreCase(id)){
+                empleadoExiste = true;
+                break;
+            }
+        }
+        return  empleadoExiste;
+    }
+    public boolean verificarEmpleadoExiate(String id)  throws EmpleadoExceptions {
+        if (empleadoExiste(id)) {
+            throw new EmpleadoExceptions(" El empleado con cédula " + id + " ya existe ");
+        }else {
+            return false;
+        }
+    }
+
+
 
 
 }

@@ -189,3 +189,526 @@ may 11, 2024 9:35:44 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.
 INFO: actualizarEvento, Clase: ModelFactoryController ,Actualizacion con exito del evento raimstem con id: 232 ,2024-05-11
 may 11, 2024 9:36:02 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
 INFO: actualizarEvento, Clase: ModelFactoryController ,Actualizacion con exito del evento shakira con id: 789 ,2024-05-11
+may 11, 2024 7:32:18 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
+may 11, 2024 7:52:08 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
+may 11, 2024 7:52:39 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearEmpleado, Clase: ModelFactoriController,Creacion con exito del empleado natalia con cedula: 1254 ,2024-05-11
+may 11, 2024 7:53:15 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearEmpleado, Clase: ModelFactoriController,Creacion con exito del empleado amaya con cedula: 5546 ,2024-05-11
+may 11, 2024 7:53:44 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearEmpleado, Clase: ModelFactoriController,Creacion con exito del empleado juan con cedula: 8877 ,2024-05-11
+may 11, 2024 7:53:51 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: crearEmpleado ,clase:ModelFactoryController, El empleado con cédula 23 ya existe ,2024-05-11
+may 11, 2024 7:54:11 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: actualizaEmpleado, Clase: ModelFactoryController ,Actualizacion con exito del empleado mark alfonso ocampo con cedula: 23 ,2024-05-11
+may 11, 2024 7:54:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEmpleado, Clase: ModelFactoryController,El EMPLEADO a consultar existe con cedula: 24 ,2024-05-11
+may 11, 2024 7:54:43 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: consultarEmpleado, Clase: ModelFactoryController, El empleado con cédula 248855 NO  existe ,2024-05-11
+may 11, 2024 7:54:52 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEmpleado, Clase: ModelFactoryController,El EMPLEADO a consultar existe con cedula: 23 ,2024-05-11
+may 11, 2024 7:55:06 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarEmpleado, clase:AdministradorViewController,Se confirmo la eliminacion del empleado con id:8877 y de nombre:  juan,2024-05-11
+may 11, 2024 7:55:06 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarEmpleado, Clase: ModelFactoryController,Eliminacion con exito del empleado con cedula: 8877 ,2024-05-11
+may 11, 2024 7:55:40 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
+may 11, 2024 7:56:04 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
+may 11, 2024 7:56:45 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
+may 11, 2024 8:02:54 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
+may 12, 2024 12:09:07 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 4:29:43 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 4:30:40 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 4:32:50 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 4:33:35 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 4:49:05 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 5:05:48 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 5:11:06 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 5:13:38 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 6:00:06 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 6:04:12 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 6:18:57 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 7:08:11 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 7:46:19 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 8:25:28 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 8:49:08 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 9:25:06 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 9:33:25 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 9:34:08 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: crearUsuario ,clase:ModelFactoryController, El usuario con cédula 1234 ya existe ,2024-05-12
+may 12, 2024 9:40:18 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 9:45:19 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 12, 2024 9:49:34 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearUsuario, Clase: ModelFactoriController,Creacion con exito del usuario maria con cedula: 1254 ,2024-05-12
+may 12, 2024 9:50:25 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearUsuario, Clase: ModelFactoriController,Creacion con exito del usuario maria con cedula: 1235 ,2024-05-12
+may 12, 2024 9:52:04 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-12
+may 13, 2024 1:44:28 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-13
+may 13, 2024 2:03:35 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearUsuario, Clase: ModelFactoriController,Creacion con exito del usuario paco con cedula: 123abc ,2024-05-13
+may 13, 2024 2:04:04 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo paco@gmail.com,2024-05-13
+may 13, 2024 2:13:17 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-13
+may 13, 2024 2:13:39 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: actualizarUsuario, clase:UsuarioVewController,Se confirmo la actualizacion del usuario con id:1234 y de nombre:  Alfonso,2024-05-13
+may 13, 2024 2:13:40 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: actualizarUsuario, Clase: ModelFactoryController ,Actualizacion con exito del usuario Alfonso ocampo con cedula: 1234 ,2024-05-13
+may 13, 2024 2:13:49 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarUsuario, clase:UsuarioVewController,Se confirmo la eliminacion del usuario con id:1234 y de nombre:  Alfonso ocampo,2024-05-13
+may 13, 2024 2:13:49 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarUsuario, Clase: ModelFactoryController,Eliminacion con exito del usuario con cedula: 1234 ,2024-05-13
+may 13, 2024 2:51:15 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 2:55:47 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,
+/C:/Users/alfon/Desktop/Proyecto%20final%20programacion%203/proyecto_final_pr3/proyecto_reservas/target/classes/co/edu/uniquindio/reservas/proyecto_reservas/empresaReservas.fxml
+,2024-05-13
+may 13, 2024 2:55:57 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,
+/C:/Users/alfon/Desktop/Proyecto%20final%20programacion%203/proyecto_final_pr3/proyecto_reservas/target/classes/co/edu/uniquindio/reservas/proyecto_reservas/empresaReservas.fxml
+,2024-05-13
+may 13, 2024 2:57:33 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,
+/C:/Users/alfon/Desktop/Proyecto%20final%20programacion%203/proyecto_final_pr3/proyecto_reservas/target/classes/co/edu/uniquindio/reservas/proyecto_reservas/empresaReservas.fxml
+,2024-05-13
+may 13, 2024 3:01:00 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 3:53:23 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:00:31 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:02:19 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:03:22 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:04:08 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearEvento, Clase: ModelFactoriController,Creacion con exito del Evento RITUAL con id 123 ,2024-05-13
+may 13, 2024 4:30:39 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:31:55 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:34:51 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:36:07 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:37:56 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:38:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:41:10 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,Datos invalidos al Inicio de sesión: Empleado con correo .equals(""),2024-05-13
+may 13, 2024 4:41:27 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:42:47 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 4:43:02 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:44:50 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:45:28 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 4:45:47 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:45:52 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 4:47:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 4:47:53 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 02 ,2024-05-13
+may 13, 2024 4:51:23 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:51:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 4:52:10 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:52:20 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 02 ,2024-05-13
+may 13, 2024 4:52:54 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 4:52:59 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-13
+may 13, 2024 4:59:56 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:00:03 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-13
+may 13, 2024 5:00:14 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 5:00:19 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-13
+may 13, 2024 5:00:24 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: consultarEvento, Clase: ModelFactoryController, El evento con id:05 NO  existe ,2024-05-13
+may 13, 2024 5:01:25 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:01:31 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: consultarEvento, Clase: ModelFactoryController, El evento con id:05 NO  existe ,2024-05-13
+may 13, 2024 5:01:48 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 5:03:46 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:03:52 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 5:04:31 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:04:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 5:05:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:05:42 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 5:20:18 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:22:14 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:24:27 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:44:56 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:45:05 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 60 ,2024-05-13
+may 13, 2024 5:45:17 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 80 ,2024-05-13
+may 13, 2024 5:47:28 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:48:24 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 60 ,2024-05-13
+may 13, 2024 5:49:38 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 5:49:44 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 60 ,2024-05-13
+may 13, 2024 5:49:49 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 80 ,2024-05-13
+may 13, 2024 5:49:53 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,No hay eventos con capasidades: 100 ,2024-05-13
+may 13, 2024 6:11:24 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 6:11:35 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-20 ,2024-05-13
+may 13, 2024 6:11:46 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-14 ,2024-05-13
+may 13, 2024 6:11:48 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-14 ,2024-05-13
+may 13, 2024 6:11:51 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-14 ,2024-05-13
+may 13, 2024 6:12:03 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,No hay eventos con fecha: 2024-05-23 ,2024-05-13
+may 13, 2024 6:13:56 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 6:14:04 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-14 ,2024-05-13
+may 13, 2024 6:14:13 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-20 ,2024-05-13
+may 13, 2024 6:14:26 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 80 ,2024-05-13
+may 13, 2024 6:14:32 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 03 ,2024-05-13
+may 13, 2024 6:49:05 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 6:49:26 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarEvento, clase:EventoViewController,Se confirmo la eliminacion del evento:01 con nombre:Concierto,2024-05-13
+may 13, 2024 6:49:26 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarEvento, Clase: ModelFactoryController,Eliminacion con exito del evento con id:01 ,2024-05-13
+may 13, 2024 7:42:22 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 7:42:34 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,No hay eventos con el empleado: 23: mark ,2024-05-13
+may 13, 2024 7:43:12 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 7:43:53 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,No hay eventos con el empleado: 33: maria ,2024-05-13
+may 13, 2024 7:48:11 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 7:48:17 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,No hay eventos con el empleado: 23: mark ,2024-05-13
+may 13, 2024 7:53:40 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 7:54:02 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,No hay eventos con el empleado: 23: mark ,2024-05-13
+may 13, 2024 8:02:05 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:02:11 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,No hay eventos con el empleado: 23: mark ,2024-05-13
+may 13, 2024 8:07:40 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:07:46 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-13
+may 13, 2024 8:07:52 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 33: maria ,2024-05-13
+may 13, 2024 8:07:59 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 24: elon ,2024-05-13
+may 13, 2024 8:09:57 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:10:05 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-13
+may 13, 2024 8:11:04 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:11:41 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-13
+may 13, 2024 8:12:47 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:13:42 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:15:19 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:15:28 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-13
+may 13, 2024 8:18:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:21:34 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:24:27 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-13
+may 13, 2024 8:24:34 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-13
+may 14, 2024 11:42:39 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-14
+may 14, 2024 11:42:52 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: actualizarUsuario, clase:UsuarioVewController,Se confirmo la actualizacion del usuario con id:1234 y de nombre:  Alfonso,2024-05-14
+may 14, 2024 11:42:53 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: actualizarUsuario, Clase: ModelFactoryController ,Actualizacion con exito del usuario Alfonso ocampo con cedula: 1234 ,2024-05-14
+may 14, 2024 11:42:59 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarUsuario, clase:UsuarioVewController,Se confirmo la eliminacion del usuario con id:1234 y de nombre:  Alfonso ocampo,2024-05-14
+may 14, 2024 11:42:59 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarUsuario, Clase: ModelFactoryController,Eliminacion con exito del usuario con cedula: 1234 ,2024-05-14
+may 14, 2024 11:43:31 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-14
+may 14, 2024 11:43:55 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearEvento, Clase: ModelFactoriController,Creacion con exito del Evento toca con id 123 ,2024-05-14
+may 14, 2024 12:34:07 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-14
+may 14, 2024 12:34:30 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,Datos invalidos al Inicio de sesión: Usuario con correo maria@23,2024-05-14
+may 14, 2024 12:34:36 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-14
+may 14, 2024 12:45:25 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 12:56:28 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-14
+may 14, 2024 1:00:58 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 1:01:15 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarUsuario, Clase: ModelFactoryController,El usuario a consultar existe con cedula: 1234 ,2024-05-14
+may 14, 2024 1:01:28 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarUsuario, clase:UsuarioVewController,Se confirmo la eliminacion del usuario con id:1234 y de nombre:  Alfonso,2024-05-14
+may 14, 2024 1:01:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarUsuario, Clase: ModelFactoryController,Eliminacion con exito del usuario con cedula: 1234 ,2024-05-14
+may 14, 2024 1:10:26 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 1:13:30 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-14
+may 14, 2024 1:14:07 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 1:14:16 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 1:14:24 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 1:14:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 80 ,2024-05-14
+may 14, 2024 1:14:48 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-14
+may 14, 2024 1:17:35 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 1:19:16 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 1:23:16 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 1:23:22 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 1:23:39 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-14 ,2024-05-14
+may 14, 2024 1:23:45 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-20 ,2024-05-14
+may 14, 2024 1:23:49 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 80 ,2024-05-14
+may 14, 2024 1:23:53 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 60 ,2024-05-14
+may 14, 2024 1:23:58 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 24: elon ,2024-05-14
+may 14, 2024 1:24:06 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-14
+may 14, 2024 1:24:27 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-14
+may 14, 2024 1:24:47 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 1:25:09 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-14
+may 14, 2024 1:31:43 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 1:31:48 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 24: elon ,2024-05-14
+may 14, 2024 1:32:42 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 80 ,2024-05-14
+may 14, 2024 1:32:50 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-14
+may 14, 2024 1:32:54 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 33: maria ,2024-05-14
+may 14, 2024 3:53:42 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-14
+may 14, 2024 3:54:58 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crearUsuario, Clase: ModelFactoriController,Creacion con exito del usuario liseyh con cedula: 102 ,2024-05-14
+may 14, 2024 3:55:10 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: actualizarUsuario, clase:UsuarioVewController,Se confirmo la actualizacion del usuario con id:102 y de nombre:  liseyh,2024-05-14
+may 14, 2024 3:55:10 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: actualizarUsuario, Clase: ModelFactoryController ,Actualizacion con exito del usuario liseth con cedula: 102 ,2024-05-14
+may 14, 2024 4:06:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:06:45 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 4:08:06 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:08:12 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 02 ,2024-05-14
+may 14, 2024 4:08:47 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:10:01 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 4:11:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:11:43 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 02 ,2024-05-14
+may 14, 2024 4:11:56 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-14 ,2024-05-14
+may 14, 2024 4:12:03 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-20 ,2024-05-14
+may 14, 2024 4:12:09 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 80 ,2024-05-14
+may 14, 2024 4:12:13 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 60 ,2024-05-14
+may 14, 2024 4:13:31 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Empleado con correo maria@23,2024-05-14
+may 14, 2024 4:13:35 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 4:13:39 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-14 ,2024-05-14
+may 14, 2024 4:15:05 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-14
+may 14, 2024 4:16:07 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: actualizarEvento, Clase: ModelFactoryController ,Actualizacion con exito del evento Concierto con id: 01 ,2024-05-14
+may 14, 2024 4:16:15 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 24: elon ,2024-05-14
+may 14, 2024 4:16:32 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarEvento, clase:EventoViewController,Se confirmo la eliminacion del evento:01 con nombre:Concierto,2024-05-14
+may 14, 2024 4:16:32 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarEvento, Clase: ModelFactoryController,Eliminacion con exito del evento con id:01 ,2024-05-14
+may 14, 2024 4:17:18 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:17:57 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarUsuario, Clase: ModelFactoryController,El usuario a consultar existe con cedula: 1234 ,2024-05-14
+may 14, 2024 4:18:03 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarUsuario, clase:UsuarioVewController,Se confirmo la eliminacion del usuario con id:1234 y de nombre:  Alfonso,2024-05-14
+may 14, 2024 4:18:03 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: eliminarUsuario, Clase: ModelFactoryController,Eliminacion con exito del usuario con cedula: 1234 ,2024-05-14
+may 14, 2024 4:19:21 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,No hay eventos con el empleado: 23: mark ,2024-05-14
+may 14, 2024 4:19:33 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 24: elon ,2024-05-14
+may 14, 2024 4:19:36 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 33: maria ,2024-05-14
+may 14, 2024 4:24:26 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:24:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 4:25:52 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:26:16 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:28:28 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:28:34 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 4:28:56 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 02 ,2024-05-14
+may 14, 2024 4:29:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:30:44 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 4:31:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,Datos invalidos al Inicio de sesión: Admin con correo try {            if( !(boxEmpleadoEncargadoEvento.getValue().equals("")))                consultarPorEmpleado();        }catch (NullPointerException e){            validar= true;        }        if(txtCapacidadMaximaEvento.getText().equals("") && ldateFechaEvento.getValue()==null        && txtIdEvento.getText().equals("")&& validar==true){            tblEventos.getItems().clear();            obtenerEvento();            tblEventos.setItems(listaEventosDto);        },2024-05-14
+may 14, 2024 4:31:52 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 4:31:59 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-14
+may 14, 2024 4:32:08 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorEmpleado, Clase: ModelFactoryController,Si hay eventos con el empleado: 23: mark ,2024-05-14
+may 14, 2024 4:32:13 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 2024-05-14 ,2024-05-14
+may 14, 2024 4:32:18 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 60 ,2024-05-14
+may 14, 2024 4:43:03 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-14
+may 14, 2024 4:43:34 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,Cannot invoke "java.time.LocalDate.toString()" because the return value of "co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.EventoDto.fecha()" is null,2024-05-14
+may 14, 2024 4:43:43 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,Cannot invoke "java.time.LocalDate.toString()" because the return value of "co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.EventoDto.fecha()" is null,2024-05-14
+may 14, 2024 4:46:23 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,Cannot invoke "java.time.LocalDate.toString()" because the return value of "co.edu.uniquindio.reservas.proyecto_reservas.mapping.dto.EventoDto.fecha()" is null,2024-05-14
+may 14, 2024 5:08:12 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,
+/C:/Users/alfon/Desktop/Proyecto%20final%20programacion%203/proyecto_final_pr3/proyecto_reservas/target/classes/co/edu/uniquindio/reservas/proyecto_reservas/eventoView.fxml
+/C:/Users/alfon/Desktop/Proyecto%20final%20programacion%203/proyecto_final_pr3/proyecto_reservas/target/classes/co/edu/uniquindio/reservas/proyecto_reservas/empresaReservas.fxml:28
+,2024-05-14
+may 14, 2024 5:13:31 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 5:14:08 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-14
+may 14, 2024 7:57:26 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-14
+may 15, 2024 1:18:23 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-15
+may 15, 2024 1:18:50 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-15
+may 15, 2024 1:45:10 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-15
+may 15, 2024 1:45:42 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-15
+may 15, 2024 1:45:57 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: consultarEvento, Clase: ModelFactoryController,El evento con el id: 01 ,2024-05-15
+may 15, 2024 1:46:17 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 14/05/2024 ,2024-05-15
+may 15, 2024 1:46:27 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 20/05/2024 ,2024-05-15
+may 15, 2024 1:47:17 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-15
+may 15, 2024 1:47:44 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-15
+may 15, 2024 1:47:56 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: validarPersona, clase: ModelFactoryController,Datos invalidos al Inicio de sesión: Admin con correo alfonso@gmail.com,2024-05-15
+may 15, 2024 1:48:09 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-15
+may 15, 2024 1:48:16 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 20/05/2024 ,2024-05-15
+may 15, 2024 1:48:22 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorFecha, Clase: ModelFactoryController,Si hay eventos con fecha: 14/05/2024 ,2024-05-15
+may 15, 2024 1:48:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: obtenerEventoPorCapasidad, Clase: ModelFactoryController,Si hay eventos con capasidades: 60 ,2024-05-15
+may 15, 2024 1:48:53 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-15
+may 15, 2024 2:39:52 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-15

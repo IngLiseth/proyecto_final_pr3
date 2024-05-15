@@ -46,6 +46,7 @@
       </columns>
    </TableView>
    <Button fx:id="btnActualizarUsuario" layoutX="232.0" layoutY="202.0" mnemonicParsing="false" onAction="#actualizarUsuarioAction" text="Actualizar" />
+   <Button fx:id="btnAtrasUsuario" layoutX="6.0" layoutY="10.0" mnemonicParsing="false" onAction="#atrasUsuarioAction" text="Atras" />
 
 
 </AnchorPane>
