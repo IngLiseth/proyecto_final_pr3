@@ -747,3 +747,19 @@ may 20, 2024 5:15:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.
 WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
 may 20, 2024 5:15:31 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
 WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
+may 20, 2024 5:28:46 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
+may 20, 2024 5:29:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
+may 20, 2024 5:32:41 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-20
+may 20, 2024 5:34:20 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
+may 20, 2024 5:36:21 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
+may 20, 2024 5:36:23 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
+may 20, 2024 5:37:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
+may 20, 2024 5:37:43 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
