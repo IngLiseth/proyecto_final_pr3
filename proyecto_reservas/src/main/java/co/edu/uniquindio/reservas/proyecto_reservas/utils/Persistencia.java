@@ -20,10 +20,10 @@ public class Persistencia
 
     //bancoUq/src/main/resources/persistencia/archivoClientes.txt
 
-    public static final String RUTA_ARCHIVO_LOG = "proyecto_reservas/src/main/resources/persistencia/log/proyecto_Reservas_log.txt";
-    public static final String RUTA_ARCHIVO_USUARIOS = "proyecto_reservas/src/main/resources/persistencia/archivos/usuario.txt";
-   public static final String RUTA_ARCHIVO_MODELO_RESERVAVIP_BINARIO = "proyecto_reservas/src/main/resources/persistencia/model.bin";
-    public static final String RUTA_ARCHIVO_MODELO_RESERVAVIP_XML = "proyecto_reservas/src/main/resources/persistencia/model.xml";
+    public static final String RUTA_ARCHIVO_LOG = "src/main/resources/persistencia/log/proyecto_Reservas_log.txt";
+    public static final String RUTA_ARCHIVO_USUARIOS = "src/main/resources/persistencia/archivos/usuario.txt";
+   public static final String RUTA_ARCHIVO_MODELO_RESERVAVIP_BINARIO = "src/main/resources/persistencia/model.bin";
+    public static final String RUTA_ARCHIVO_MODELO_RESERVAVIP_XML = "src/main/resources/persistencia/model.xml";
 
     public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_USUARIOS = "proyecto_reservas/src/main/resources/persistencia/respaldo/usuarioCopia.txt";
     public static final String RUTA_ARCHIVO_COPIA_SEGURIDAD_MODEL_XML = "proyecto_reservas/src/main/resources/persistencia/respaldo/modelCopia.XML";

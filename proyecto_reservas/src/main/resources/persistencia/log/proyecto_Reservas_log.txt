@@ -712,3 +712,5 @@ may 15, 2024 1:48:53 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.
 INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-15
 may 15, 2024 2:39:52 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-15
+may 20, 2024 5:39:56 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
+INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-20
