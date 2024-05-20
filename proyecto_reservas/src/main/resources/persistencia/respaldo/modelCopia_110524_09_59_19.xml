@@ -1,48 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="21.0.2" class="java.beans.XMLDecoder">
  <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP" id="EventoVIP0">
-  <void property="listaAdministradores">
-   <void method="add">
-    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Administrador">
-     <void property="contrasena">
-      <string>123</string>
-     </void>
-     <void property="correo">
-      <string>Cabbyd@gmail.com</string>
-     </void>
-     <void property="id">
-      <string>111</string>
-     </void>
-     <void property="nombre">
-      <string>Cabbyd</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Administrador">
-     <void property="contrasena">
-      <string>123</string>
-     </void>
-     <void property="correo">
-      <string>Connor@gmail.com</string>
-     </void>
-     <void property="id">
-      <string>222</string>
-     </void>
-     <void property="nombre">
-      <string>Connor</string>
-     </void>
-    </object>
-   </void>
-  </void>
   <void property="listaEmpleados">
    <void method="add">
-    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado" id="Empleado0">
      <void property="contrasena">
-      <string>123</string>
+      <string>abc</string>
      </void>
      <void property="correo">
-      <string>mar@23</string>
+      <string>asd@23</string>
      </void>
      <void property="id">
       <string>23</string>
@@ -51,7 +17,7 @@
       <object class="java.util.ArrayList"/>
      </void>
      <void property="nombre">
-      <string>mark</string>
+      <string>alfonso</string>
      </void>
      <void property="roles">
       <string>mesero</string>
@@ -59,130 +25,68 @@
     </object>
    </void>
    <void method="add">
-    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado" id="Empleado1">
      <void property="contrasena">
-      <string>123</string>
+      <string>abc</string>
      </void>
      <void property="correo">
-      <string>alo@23</string>
+      <string>aaaa@23</string>
      </void>
      <void property="id">
-      <string>24</string>
+      <string>34</string>
      </void>
      <void property="listaDeEventos">
       <object class="java.util.ArrayList"/>
      </void>
      <void property="nombre">
-      <string>elon</string>
+      <string>juan</string>
      </void>
      <void property="roles">
-      <string>captador</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado" id="Empleado2">
-     <void property="contrasena">
-      <string>123</string>
-     </void>
-     <void property="correo">
-      <string>maria@23</string>
-     </void>
-     <void property="id">
-      <string>33</string>
-     </void>
-     <void property="listaDeEventos">
-      <object class="java.util.ArrayList"/>
-     </void>
-     <void property="nombre">
-      <string>maria</string>
-     </void>
-     <void property="roles">
-      <string>portero</string>
+      <string>vendedor</string>
      </void>
     </object>
    </void>
   </void>
-<<<<<<< Updated upstream
   <void property="listaEventos">
-   <void method="add">
-    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Evento" id="Evento0">
-     <void property="capacidadMaxima">
-      <int>80</int>
-     </void>
-     <void property="descripcion">
-      <string>concierto de Shakira</string>
-     </void>
-     <void property="disponible">
-      <boolean>true</boolean>
-     </void>
-     <void property="empleadoEncargado">
-      <object idref="Empleado0"/>
-     </void>
-     <void property="fecha">
-      <string>20/05/2024</string>
-     </void>
-     <void property="id">
-      <string>01</string>
-     </void>
-     <void property="nombre">
-      <string>Concierto</string>
-     </void>
-    </object>
-   </void>
    <void method="add">
     <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Evento">
      <void property="capacidadMaxima">
-      <int>80</int>
+      <int>67</int>
      </void>
      <void property="descripcion">
-      <string>Matrimonio por la iglesia </string>
-     </void>
-     <void property="disponible">
-      <boolean>true</boolean>
+      <string>clasico</string>
      </void>
      <void property="empleadoEncargado">
       <object idref="Empleado1"/>
      </void>
-     <void property="fecha">
-      <string>14/05/2024</string>
-     </void>
      <void property="id">
-      <string>02</string>
+      <string>232</string>
      </void>
      <void property="nombre">
-      <string>Boda</string>
+      <string>raimstem</string>
      </void>
     </object>
    </void>
    <void method="add">
     <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Evento">
      <void property="capacidadMaxima">
-      <int>60</int>
+      <int>78000</int>
      </void>
      <void property="descripcion">
-      <string>Pelicula de Accion</string>
-     </void>
-     <void property="disponible">
-      <boolean>true</boolean>
+      <string>concierto de shakira</string>
      </void>
      <void property="empleadoEncargado">
-      <object idref="Empleado2"/>
-     </void>
-     <void property="fecha">
-      <string>14/05/2024</string>
+      <object idref="Empleado0"/>
      </void>
      <void property="id">
-      <string>03</string>
+      <string>789</string>
      </void>
      <void property="nombre">
-      <string>Cine</string>
+      <string>shakira</string>
      </void>
     </object>
    </void>
   </void>
-=======
->>>>>>> Stashed changes
   <void property="listaUsuarios">
    <void method="add">
     <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario" id="Usuario0">
@@ -196,7 +100,7 @@
       <string>1234</string>
      </void>
      <void property="nombre">
-      <string>Alfonso</string>
+      <string>Alfonso ocampo</string>
      </void>
      <void property="reservasDelUsuario">
       <object class="java.util.ArrayList" id="ArrayList0">
@@ -209,7 +113,14 @@
           </object>
          </void>
          <void property="evento">
-          <object idref="Evento0"/>
+          <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Evento" id="Evento0">
+           <void property="descripcion">
+            <string>concierto de Shakira</string>
+           </void>
+           <void property="nombre">
+            <string>Concierto</string>
+           </void>
+          </object>
          </void>
          <void property="id">
           <string>1</string>
@@ -277,6 +188,44 @@
      </void>
      <void property="reservasDelUsuario">
       <object idref="ArrayList0"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario">
+     <void property="contrasena">
+      <string>123</string>
+     </void>
+     <void property="correo">
+      <string>paco@gmail.com</string>
+     </void>
+     <void property="id">
+      <string>134234</string>
+     </void>
+     <void property="nombre">
+      <string>paco</string>
+     </void>
+     <void property="reservasDelUsuario">
+      <object class="java.util.ArrayList"/>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario">
+     <void property="contrasena">
+      <string>112233</string>
+     </void>
+     <void property="correo">
+      <string>poablo@gmail</string>
+     </void>
+     <void property="id">
+      <string>1254</string>
+     </void>
+     <void property="nombre">
+      <string>pablo</string>
+     </void>
+     <void property="reservasDelUsuario">
+      <object class="java.util.ArrayList"/>
      </void>
     </object>
    </void>
