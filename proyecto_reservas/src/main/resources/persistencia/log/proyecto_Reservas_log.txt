@@ -189,7 +189,6 @@ may 11, 2024 9:35:44 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.
 INFO: actualizarEvento, Clase: ModelFactoryController ,Actualizacion con exito del evento raimstem con id: 232 ,2024-05-11
 may 11, 2024 9:36:02 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
 INFO: actualizarEvento, Clase: ModelFactoryController ,Actualizacion con exito del evento shakira con id: 789 ,2024-05-11
-<<<<<<< Updated upstream
 may 11, 2024 7:32:18 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
 may 11, 2024 7:52:08 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
@@ -713,53 +712,3 @@ may 15, 2024 1:48:53 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.
 INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Admin con correo Cabbyd@gmail.com,2024-05-15
 may 15, 2024 2:39:52 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-15
-=======
-may 11, 2024 9:59:29 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
-may 11, 2024 10:03:36 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
-may 11, 2024 10:03:42 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: eliminarEvento, clase:EventoViewController,Se confirmo la eliminacion del evento:789 con nombre:shakira,2024-05-11
-may 11, 2024 10:03:43 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: eliminarEvento, Clase: ModelFactoryController,Eliminacion con exito del evento con id:789 ,2024-05-11
-may 11, 2024 10:03:46 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: eliminarEvento, clase:EventoViewController,Se confirmo la eliminacion del evento:232 con nombre:raimstem,2024-05-11
-may 11, 2024 10:03:46 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: eliminarEvento, Clase: ModelFactoryController,Eliminacion con exito del evento con id:232 ,2024-05-11
-may 11, 2024 10:04:05 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
-may 11, 2024 10:05:22 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
-may 11, 2024 10:22:08 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
-may 11, 2024 10:22:40 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: consultarUsuario, Clase: ModelFactoryController, El usuario con cédula 123 NO  existe ,2024-05-11
-may 11, 2024 10:23:01 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: consultarUsuario, Clase: ModelFactoryController,El usuario a consultar existe con cedula: 1234 ,2024-05-11
-may 11, 2024 10:31:50 A. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-11
-may 17, 2024 3:25:47 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-17
-may 20, 2024 5:01:35 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-20
->>>>>>> Stashed changes
-may 20, 2024 5:15:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
-may 20, 2024 5:15:31 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
-may 20, 2024 5:28:46 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
-may 20, 2024 5:29:29 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
-may 20, 2024 5:32:41 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-INFO: validarPersona, clase: ModelFactoryController,Inicio de sesión por Usuario con correo alfonso@gmail.com,2024-05-20
-may 20, 2024 5:34:20 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
-may 20, 2024 5:36:21 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
-may 20, 2024 5:36:23 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
-may 20, 2024 5:37:37 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
-may 20, 2024 5:37:43 P. M. co.edu.uniquindio.reservas.proyecto_reservas.utils.ArchivoUtil guardarRegistroLog
-WARNING: validarPersona, clase: ModelFactoryController,Cannot invoke "co.edu.uniquindio.reservas.proyecto_reservas.model.EventoVIP.validarPersona(String, String, String)" because "this.eventoVIP" is null,2024-05-20
