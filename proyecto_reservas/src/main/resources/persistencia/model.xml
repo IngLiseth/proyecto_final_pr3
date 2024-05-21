@@ -37,7 +37,7 @@
   </void>
   <void property="listaEmpleados">
    <void method="add">
-    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado" id="Empleado0">
      <void property="contrasena">
       <string>123</string>
      </void>
@@ -59,7 +59,7 @@
     </object>
    </void>
    <void method="add">
-    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado">
+    <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Empleado" id="Empleado1">
      <void property="contrasena">
       <string>123</string>
      </void>
@@ -103,7 +103,6 @@
     </object>
    </void>
   </void>
-<<<<<<< Updated upstream
   <void property="listaEventos">
    <void method="add">
     <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Evento" id="Evento0">
@@ -181,8 +180,6 @@
     </object>
    </void>
   </void>
-=======
->>>>>>> Stashed changes
   <void property="listaUsuarios">
    <void method="add">
     <object class="co.edu.uniquindio.reservas.proyecto_reservas.model.Usuario" id="Usuario0">
